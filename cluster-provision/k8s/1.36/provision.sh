@@ -36,12 +36,6 @@ else
   exit 1
 fi
 
-# Install modules of the initrd kernel.
-dnf install -y "kernel-modules-$(uname -r)" "kernel-devel-$(uname -r)"
-if [ "$release" == "centos10" ]; then
-  dnf install -y "kernel-modules-extra-$(uname -r)"
-fi
-
 # Resize root partition
 dnf install -y cloud-utils-growpart
 if growpart /dev/vda $ROOT_PARTITION; then
@@ -133,3 +127,28 @@ fi
 
 # envsubst pkg is not available by default in s390x Architecture, so explicitly installing it as part of gettext
 dnf install -y gettext
+
+# Kernel bisection
+NEW_KBUILD='701'  # KO
+NEW_KBUILD='691'  # OK
+NEW_KBUILD='696'  # ??
+NEW_KERNEL="5.14.0-${NEW_KBUILD}.el9.x86_64"  # ??
+dnf install -y --disablerepo='*' \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-core-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-modules-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-modules-core-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-tools-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-tools-libs-${NEW_KERNEL}.rpm
+
+dnf install -y \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-devel-${NEW_KERNEL}.rpm \
+
+OLD_KERNEL=$(uname -r)
+dnf remove -y --setopt=protect_running_kernel=false --disablerepo='*' \
+  kernel-${OLD_KERNEL} \
+  kernel-core-${OLD_KERNEL} \
+  kernel-modules-${OLD_KERNEL} \
+  kernel-modules-core-${OLD_KERNEL} \
+  kernel-tools-${OLD_KERNEL} \
+  kernel-tools-libs-${OLD_KERNEL}
