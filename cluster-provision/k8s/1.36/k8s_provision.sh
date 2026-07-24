@@ -401,3 +401,30 @@ nmcli connection add con-name eth0 ifname eth0 type ethernet
 
 # Remove machine-id, allowing unique ID/s for its instances
 rm -f /etc/machine-id ; touch /etc/machine-id
+
+# Kernel bisection
+: <<\EOF
+NEW_KBUILD='701'  # KO
+NEW_KBUILD='691'  # OK
+NEW_KBUILD='696'  # ??
+NEW_KERNEL="5.14.0-${NEW_KBUILD}.el9.x86_64"  # ??
+dnf install -y --disablerepo='*' \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-core-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-modules-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-modules-core-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-tools-${NEW_KERNEL}.rpm \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-tools-libs-${NEW_KERNEL}.rpm
+
+dnf install -y \
+  https://kojihub.stream.centos.org/kojifiles/packages/kernel/5.14.0/${NEW_KBUILD}.el9/x86_64/kernel-devel-${NEW_KERNEL}.rpm \
+
+OLD_KERNEL=$(uname -r)
+dnf remove -y --setopt=protect_running_kernel=false --disablerepo='*' \
+  kernel-${OLD_KERNEL} \
+  kernel-core-${OLD_KERNEL} \
+  kernel-modules-${OLD_KERNEL} \
+  kernel-modules-core-${OLD_KERNEL} \
+  kernel-tools-${OLD_KERNEL} \
+  kernel-tools-libs-${OLD_KERNEL}
+EOF
