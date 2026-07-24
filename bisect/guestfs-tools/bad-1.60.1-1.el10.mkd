@@ -1,0 +1,422 @@
+> dnf install -y \
+    bind-utils \
+    dnsmasq \
+    guestfs-tools \
+    jq \
+    iproute \
+    iptables \
+    iputils \
+    openssh-clients \
+    qemu-kvm-core \
+    tmux \
+    socat \
+    tcpdump
+
+Installs
+- kernel-debug-core
+- kernel-debug-modules
+- kernel-debug-modules-core
+- kernel-debug-modules-core
+
+Instead of
+- kernel-core
+- kernel-modules-core
+
+Caused by:
+- guestfs-tools => OK
+- guestfs-tools then iptables => NOK
+- guestfs-tools then iptables-no-weak-deps => OK
+- guestfs-tools plus iptables => NOK
+- guestfs-tools plus iptables no-weak-deps => OK
+- iptables => OK
+- iptables then guestfs-tools => OK
+- iptables plus guestfs-tools => OK
+
+guestfs-tools
+└─libguestfs
+  └─libguestfs-appliance
+    └─kernel (provided by kernel-core)
+      └─kernel-modules-core
+        └─libguestfs-appliance
+
+iptables -> iptables-nft
+
+Requires:
+(kernel-64k-debug-modules-extra if kernel-64k-debug-core)
+(kernel-64k-debug-modules-extra if kernel-64k-debug-modules-core)
+(kernel-64k-modules-extra if kernel-64k-core)
+(kernel-64k-modules-extra if kernel-64k-modules-core)
+(kernel-debug-modules-extra if kernel-debug-core)
+(kernel-debug-modules-extra if kernel-debug-modules-core)
+(kernel-modules-extra if kernel-core)
+(kernel-modules-extra if kernel-modules-core)
+(kernel-rt-64k-debug-modules-extra if kernel-rt-64k-debug-core)
+(kernel-rt-64k-debug-modules-extra if kernel-rt-64k-debug-modules-core)
+(kernel-rt-64k-modules-extra if kernel-rt-64k-core)
+(kernel-rt-64k-modules-extra if kernel-rt-64k-modules-core)
+(kernel-rt-debug-modules-extra if kernel-rt-debug-core)
+(kernel-rt-debug-modules-extra if kernel-rt-debug-modules-core)
+(kernel-rt-modules-extra if kernel-rt-core)
+(kernel-rt-modules-extra if kernel-rt-modules-core)
+kernel-modules-extra-matched
+
+Recommends:
+(kernel-64k-debug-modules-extra if kernel-64k-debug-modules-core)
+(kernel-64k-modules-extra if kernel-64k-modules-core)
+(kernel-debug-modules-extra if kernel-debug-modules-core)
+(kernel-modules-extra if (kernel-modules-core unless (kernel-debug-modules-core or kernel-rt-modules-core or kernel-rt-debug-modules-core or kernel-64k-modules-core or kernel-64k-debug-modules-core or kernel-rt-64k-modules-core or kernel-rt-64k-debug-modules-core)))
+(kernel-modules-extra if kernel-modules-core)
+(kernel-rt-64k-debug-modules-extra if kernel-rt-64k-debug-modules-core)
+(kernel-rt-64k-modules-extra if kernel-rt-64k-modules-core)
+(kernel-rt-debug-modules-extra if kernel-rt-debug-modules-core)
+(kernel-rt-modules-extra if kernel-rt-modules-core)
+
+==================================================================================================================================================
+ Package                                         Architecture        Version                                         Repository              Size
+==================================================================================================================================================
+Installing:
+ bind-utils                                      x86_64              32:9.18.33-19.el10                              appstream              226 k
+ dnsmasq                                         x86_64              2.90-7.el10                                     appstream              365 k
+ guestfs-tools                                   x86_64              1.56.0-1.el10                                   appstream              4.4 M
+ iproute                                         x86_64              7.0.0-2.el10                                    baseos                 900 k
+ iptables-nft                                    x86_64              1.8.11-15.el10                                  appstream              200 k
+ iputils                                         x86_64              20240905-5.el10                                 baseos                 196 k
+ jq                                              x86_64              1.7.1-13.el10                                   baseos                 200 k
+ openssh-clients                                 x86_64              9.9p1-28.el10                                   baseos                 769 k
+ qemu-kvm-core                                   x86_64              18:10.1.0-24.el10                               appstream              4.8 M
+ socat                                           x86_64              1.7.4.4-9.el10                                  appstream              307 k
+ tcpdump                                         x86_64              14:4.99.4-10.el10                               appstream              503 k
+ tmux                                            x86_64              3.3a-14.20230918gitb202a2f.el10                 baseos                 516 k
+Installing dependencies:
+ acl                                             x86_64              2.3.2-4.el10                                    baseos                  77 k
+ augeas-libs                                     x86_64              1.14.2-0.9.20260120gitf4135e3.el10              appstream              426 k
+ authselect                                      x86_64              1.5.3-1.el10                                    baseos                 230 k
+ authselect-libs                                 x86_64              1.5.3-1.el10                                    baseos                 268 k
+ bind-libs                                       x86_64              32:9.18.33-19.el10                              appstream              1.3 M
+ bind-license                                    noarch              32:9.18.33-19.el10                              appstream               13 k
+ binutils                                        x86_64              2.41-65.el10                                    baseos                 6.4 M
+ binutils-gold                                   x86_64              2.41-65.el10                                    baseos                 795 k
+ bzip2                                           x86_64              1.0.8-25.el10                                   baseos                  54 k
+ capstone                                        x86_64              5.0.1-8.el10                                    appstream              1.0 M
+ checkpolicy                                     x86_64              3.11-1.el10                                     appstream              371 k
+ clevis                                          x86_64              23-2.el10                                       appstream               60 k
+ clevis-luks                                     x86_64              23-2.el10                                       appstream               35 k
+ clevis-pin-tpm2                                 x86_64              0.5.5-1.el10                                    appstream              911 k
+ container-selinux                               noarch              4:2.250.0-1.el10                                appstream               60 k
+ cpio                                            x86_64              2.15-3.el10                                     baseos                 292 k
+ cryptsetup                                      x86_64              2.8.6-1.el10                                    baseos                 355 k
+ cyrus-sasl-gssapi                               x86_64              2.1.28-27.el10                                  baseos                  27 k
+ cyrus-sasl-lib                                  x86_64              2.1.28-27.el10                                  baseos                 106 k
+ device-mapper-event                             x86_64              10:1.02.215-3.el10                              baseos                  37 k
+ device-mapper-event-libs                        x86_64              10:1.02.215-3.el10                              baseos                  31 k
+ device-mapper-persistent-data                   x86_64              1.3.2-1.el10                                    baseos                 1.2 M
+ dhcpcd                                          x86_64              10.0.6-11.el10                                  baseos                 234 k
+ dmidecode                                       x86_64              1:3.6-5.el10                                    baseos                  99 k
+ dosfstools                                      x86_64              4.2-12.el10                                     baseos                 158 k
+ dracut                                          x86_64              107-9.el10                                      baseos                 480 k
+ duktape                                         x86_64              2.7.0-10.el10                                   baseos                 170 k
+ e2fsprogs                                       x86_64              1.47.1-5.el10                                   baseos                 1.1 M
+ e2fsprogs-libs                                  x86_64              1.47.1-5.el10                                   baseos                 225 k
+ edk2-ovmf                                       noarch              20260221-5.el10                                 appstream              8.8 M
+ file                                            x86_64              5.45-12.el10                                    baseos                  48 k
+ fstrm                                           x86_64              0.6.1-12.el10                                   appstream               29 k
+ fuse                                            x86_64              2.9.9-25.el10                                   baseos                  82 k
+ fuse-common                                     x86_64              3.16.2-5.el10                                   baseos                 9.7 k
+ fuse-libs                                       x86_64              2.9.9-25.el10                                   baseos                  99 k
+ fuse3-libs                                      x86_64              3.16.2-5.el10                                   baseos                  95 k
+ gdbm                                            x86_64              1:1.23-14.el10                                  baseos                 151 k
+ gettext                                         x86_64              0.22.5-6.el10                                   baseos                 1.1 M
+ gettext-envsubst                                x86_64              0.22.5-6.el10                                   baseos                  38 k
+ gettext-libs                                    x86_64              0.22.5-6.el10                                   baseos                 669 k
+ gettext-runtime                                 x86_64              0.22.5-6.el10                                   baseos                 122 k
+ gnupg2                                          x86_64              2.4.5-5.el10                                    baseos                 2.7 M
+ gnutls-dane                                     x86_64              3.8.10-4.el10                                   appstream               40 k
+ gnutls-utils                                    x86_64              3.8.10-4.el10                                   appstream              313 k
+ groff-base                                      x86_64              1.23.0-10.el10                                  baseos                 1.1 M
+ gsettings-desktop-schemas                       x86_64              47.1-4.el10                                     baseos                 784 k
+ gssproxy                                        x86_64              0.9.2-10.el10                                   baseos                 114 k
+ hexedit                                         x86_64              1.6-8.el10                                      appstream               43 k
+ hivex-libs                                      x86_64              1.3.24-2.el10                                   appstream               46 k
+ hwdata                                          noarch              0.379-10.9.el10                                 baseos                 1.7 M
+ inih                                            x86_64              58-3.el10                                       baseos                  19 k
+ iproute-tc                                      x86_64              7.0.0-2.el10                                    baseos                 462 k
+ iptables-libs                                   x86_64              1.8.11-15.el10                                  baseos                 446 k
+ ipxe-roms-qemu                                  noarch              20240119-5.gitde8a0821.el10                     appstream              850 k
+ jansson                                         x86_64              2.14-3.el10                                     baseos                  46 k
+ jose                                            x86_64              14-102.el10                                     appstream               69 k
+ json-glib                                       x86_64              1.8.0-5.el10                                    baseos                 168 k
+ kbd                                             x86_64              2.6.4-7.el10                                    baseos                 407 k
+ kbd-legacy                                      noarch              2.6.4-7.el10                                    baseos                 592 k
+ kbd-misc                                        noarch              2.6.4-7.el10                                    baseos                 1.7 M
+ kernel-debug-core                               x86_64              6.12.0-251.el10                                 baseos                  34 M
+ kernel-debug-modules                            x86_64              6.12.0-251.el10                                 baseos                  73 M
+ kernel-debug-modules-core                       x86_64              6.12.0-251.el10                                 baseos                  48 M
+ kmod                                            x86_64              31-13.el10                                      baseos                 136 k
+ less                                            x86_64              661-3.el10                                      baseos                 191 k
+ libaio                                          x86_64              0.3.112-1.el10                                  baseos                  23 k
+ libassuan                                       x86_64              2.5.6-6.el10                                    baseos                  69 k
+ libbasicobjects                                 x86_64              0.1.1-58.el10                                   baseos                  27 k
+ libbrotli                                       x86_64              1.1.0-7.el10                                    baseos                 344 k
+ libcbor                                         x86_64              0.11.0-3.el10                                   baseos                  34 k
+ libcollection                                   x86_64              0.7.0-58.el10                                   baseos                  45 k
+ libconfig                                       x86_64              1.7.3-10.el10                                   baseos                  73 k
+ libev                                           x86_64              4.33-15.el10                                    baseos                  52 k
+ libevent                                        x86_64              2.1.12-16.el10                                  baseos                 261 k
+ libfdt                                          x86_64              1.7.0-12.el10                                   appstream               35 k
+ libfido2                                        x86_64              1.14.0-7.el10                                   baseos                  98 k
+ libgcrypt                                       x86_64              1.11.0-7.el10                                   baseos                 586 k
+ libgpg-error                                    x86_64              1.50-2.el10                                     baseos                 236 k
+ libguestfs                                      x86_64              1:1.60.1-1.el10                                 appstream              1.2 M
+ libguestfs-appliance                            x86_64              1:1.60.1-1.el10                                 appstream              2.5 M
+ libibverbs                                      x86_64              62.0-2.el10                                     baseos                 484 k
+ libini_config                                   x86_64              1.3.1-58.el10                                   baseos                  68 k
+ libjose                                         x86_64              14-102.el10                                     appstream               66 k
+ libkcapi                                        x86_64              1.5.0-3.el10                                    baseos                  48 k
+ libkcapi-hasher                                 x86_64              1.5.0-3.el10                                    baseos                  26 k
+ libkcapi-hmaccalc                               x86_64              1.5.0-3.el10                                    baseos                 9.9 k
+ libksba                                         x86_64              1.6.7-2.el10                                    baseos                 159 k
+ libluksmeta                                     x86_64              10-1.el10                                       appstream               25 k
+ libmaxminddb                                    x86_64              1.9.1-4.el10                                    appstream               43 k
+ libmnl                                          x86_64              1.0.5-7.el10                                    baseos                  29 k
+ libnbd                                          x86_64              1.25.7-1.el10                                   appstream              180 k
+ libnetfilter_conntrack                          x86_64              1.0.9-12.el10                                   baseos                  59 k
+ libnfnetlink                                    x86_64              1.0.2-3.el10                                    baseos                  30 k
+ libnfsidmap                                     x86_64              1:2.8.3-8.el10                                  baseos                  63 k
+ libnftnl                                        x86_64              1.3.0-3.el10                                    baseos                  87 k
+ libnl3                                          x86_64              3.11.0-1.el10                                   baseos                 361 k
+ libnvme                                         x86_64              1.16.2-1.el10                                   baseos                 120 k
+ libosinfo                                       x86_64              1.11.0-8.el10                                   appstream              317 k
+ libpath_utils                                   x86_64              0.2.1-58.el10                                   baseos                  30 k
+ libpcap                                         x86_64              14:1.10.4-7.el10                                baseos                 175 k
+ libpipeline                                     x86_64              1.5.7-7.el10                                    baseos                  53 k
+ libpng                                          x86_64              2:1.6.40-13.el10                                baseos                 120 k
+ libproxy                                        x86_64              0.5.5-4.el10                                    baseos                  49 k
+ libpsl                                          x86_64              0.21.5-6.el10                                   baseos                  65 k
+ libref_array                                    x86_64              0.1.5-58.el10                                   baseos                  28 k
+ libselinux-utils                                x86_64              3.11-1.el10                                     baseos                 127 k
+ libslirp                                        x86_64              4.7.0-10.el10                                   appstream               75 k
+ libsoup3                                        x86_64              3.6.6-1.el10                                    appstream              401 k
+ libss                                           x86_64              1.47.1-5.el10                                   baseos                  31 k
+ libssh                                          x86_64              0.12.0-2.el10                                   baseos                 276 k
+ libssh-config                                   noarch              0.12.0-2.el10                                   baseos                 8.2 k
+ libtirpc                                        x86_64              1.3.5-1.el10                                    baseos                  95 k
+ libtpms                                         x86_64              0.9.6-11.el10                                   appstream              185 k
+ liburing                                        x86_64              2.12-1.el10                                     baseos                  43 k
+ libusb1                                         x86_64              1.0.30-1.el10                                   baseos                  77 k
+ libutempter                                     x86_64              1.2.1-15.el10                                   baseos                  27 k
+ libuv                                           x86_64              1:1.52.1-1.el10                                 appstream              265 k
+ libverto-libev                                  x86_64              0.3.2-10.el10                                   baseos                  14 k
+ libvirt-daemon-common                           x86_64              12.5.0-1.el10                                   appstream              166 k
+ libvirt-daemon-driver-network                   x86_64              12.5.0-1.el10                                   appstream              279 k
+ libvirt-daemon-driver-qemu                      x86_64              12.5.0-1.el10                                   appstream              1.0 M
+ libvirt-daemon-driver-secret                    x86_64              12.5.0-1.el10                                   appstream              229 k
+ libvirt-daemon-driver-storage-core              x86_64              12.5.0-1.el10                                   appstream              279 k
+ libvirt-daemon-log                              x86_64              12.5.0-1.el10                                   appstream               75 k
+ libvirt-libs                                    x86_64              12.5.0-1.el10                                   appstream              5.9 M
+ libwsman1                                       x86_64              2.8.1-3.el10                                    appstream              138 k
+ libxslt                                         x86_64              1.1.39-10.el10                                  appstream              190 k
+ linux-firmware-whence                           noarch              20260722-25.el10                                baseos                 137 k
+ lmdb-libs                                       x86_64              0.9.32-4.el10                                   baseos                  62 k
+ lsscsi                                          x86_64              0.32-17.el10                                    baseos                  61 k
+ luksmeta                                        x86_64              10-1.el10                                       appstream               21 k
+ lvm2                                            x86_64              10:2.03.41-3.el10                               baseos                 1.5 M
+ lvm2-libs                                       x86_64              10:2.03.41-3.el10                               baseos                 954 k
+ lzo                                             x86_64              2.10-14.el10                                    baseos                  67 k
+ lzop                                            x86_64              1.04-16.el10                                    baseos                  57 k
+ man-db                                          x86_64              2.12.0-10.el10                                  baseos                 1.3 M
+ mdadm                                           x86_64              4.4-4.el10                                      baseos                 448 k
+ nbdkit-basic-filters                            x86_64              1.46.2-1.el10                                   appstream              389 k
+ nbdkit-basic-plugins                            x86_64              1.46.2-1.el10                                   appstream              211 k
+ nbdkit-selinux                                  noarch              1.46.2-1.el10                                   appstream               25 k
+ nbdkit-server                                   x86_64              1.46.2-1.el10                                   appstream              139 k
+ nettle                                          x86_64              3.10.1-1.el10                                   baseos                 559 k
+ nftables                                        x86_64              1:1.1.5-5.el10                                  baseos                 448 k
+ npth                                            x86_64              1.6-21.el10                                     baseos                  26 k
+ numactl-libs                                    x86_64              2.0.19-3.el10                                   baseos                  31 k
+ numad                                           x86_64              0.5-50.20251104git.el10                         baseos                  39 k
+ oniguruma                                       x86_64              6.9.9-7.el10                                    baseos                 216 k
+ openldap                                        x86_64              2.6.13-1.el10                                   baseos                 240 k
+ openssh                                         x86_64              9.9p1-28.el10                                   baseos                 354 k
+ osinfo-db                                       noarch              20250606-2.el10                                 appstream              564 k
+ osinfo-db-tools                                 x86_64              1.11.0-8.el10                                   appstream               74 k
+ pam                                             x86_64              1.6.1-11.el10                                   baseos                 585 k
+ parted                                          x86_64              3.6-7.el10                                      baseos                 583 k
+ passt                                           x86_64              0^20260611.ga9c61ff-1.el10                      appstream              320 k
+ pixman                                          x86_64              0.43.4-2.el10                                   appstream              286 k
+ policycoreutils                                 x86_64              3.11-1.el10                                     baseos                 270 k
+ policycoreutils-python-utils                    noarch              3.11-1.el10                                     appstream               46 k
+ polkit                                          x86_64              125-6.el10                                      baseos                 162 k
+ polkit-libs                                     x86_64              125-6.el10                                      baseos                  67 k
+ procps-ng                                       x86_64              4.0.4-13.el10                                   baseos                 374 k
+ protobuf-c                                      x86_64              1.5.0-6.el10                                    baseos                  33 k
+ psmisc                                          x86_64              23.6-8.el10                                     baseos                 319 k
+ publicsuffix-list-dafsa                         noarch              20240107-5.el10                                 baseos                  59 k
+ python3-audit                                   x86_64              4.0.3-5.el10                                    baseos                  69 k
+ python3-distro                                  noarch              1.9.0-5.el10                                    baseos                  48 k
+ python3-libselinux                              x86_64              3.11-1.el10                                     appstream              202 k
+ python3-libsemanage                             x86_64              3.11-1.el10                                     appstream               80 k
+ python3-policycoreutils                         noarch              3.11-1.el10                                     appstream              2.2 M
+ python3-setools                                 x86_64              4.7.0-1.el10                                    baseos                 808 k
+ qemu-img                                        x86_64              18:10.1.0-24.el10                               appstream              2.4 M
+ qemu-kvm-common                                 x86_64              18:10.1.0-24.el10                               appstream              722 k
+ quota                                           x86_64              1:4.09-10.el10                                  baseos                 198 k
+ quota-nls                                       noarch              1:4.09-10.el10                                  baseos                  76 k
+ rpcbind                                         x86_64              1.2.9-0.el10                                    baseos                  58 k
+ rpm-plugin-selinux                              x86_64              4.19.1.1-25.el10                                baseos                  17 k
+ scrub                                           x86_64              2.6.1-11.el10                                   appstream               45 k
+ seabios-bin                                     noarch              1.17.0-1.el10                                   appstream               96 k
+ seavgabios-bin                                  noarch              1.17.0-1.el10                                   appstream               33 k
+ selinux-policy                                  noarch              42.1.26-1.el10                                  baseos                  61 k
+ selinux-policy-targeted                         noarch              42.1.26-1.el10                                  baseos                 6.3 M
+ snappy                                          x86_64              1.1.10-7.el10                                   baseos                  38 k
+ supermin                                        x86_64              5.3.5-2.el10                                    appstream              945 k
+ swtpm                                           x86_64              0.9.0-6.el10                                    appstream               28 k
+ swtpm-libs                                      x86_64              0.9.0-6.el10                                    appstream               49 k
+ swtpm-selinux                                   noarch              0.9.0-6.el10                                    appstream               21 k
+ swtpm-tools                                     x86_64              0.9.0-6.el10                                    appstream              116 k
+ systemd-container                               x86_64              257-30.el10                                     baseos                 667 k
+ systemd-udev                                    x86_64              257-30.el10                                     baseos                 2.3 M
+ tpm2-tools                                      x86_64              5.7-5.el10                                      baseos                 853 k
+ tpm2-tss-fapi                                   x86_64              4.1.3-6.el10                                    baseos                 349 k
+ unbound-libs                                    x86_64              1.25.1-1.el10                                   baseos                 565 k
+ userspace-rcu                                   x86_64              0.14.0-7.el10                                   baseos                 115 k
+ util-linux                                      x86_64              2.40.2-20.el10                                  baseos                 1.3 M
+ which                                           x86_64              2.21-44.el10                                    baseos                  42 k
+ xfsprogs                                        x86_64              6.16.0-1.el10                                   baseos                 1.3 M
+ xz                                              x86_64              1:5.6.2-4.el10                                  baseos                 481 k
+ zstd                                            x86_64              1.5.5-9.el10                                    baseos                 464 k
+Installing weak dependencies:
+ amd-gpu-firmware                                noarch              20260722-25.el10                                appstream               29 M
+ amd-ucode-firmware                              noarch              20260722-25.el10                                baseos                 704 k
+ atheros-firmware                                noarch              20260722-25.el10                                baseos                  47 M
+ brcmfmac-firmware                               noarch              20260722-25.el10                                baseos                 9.7 M
+ cirrus-audio-firmware                           noarch              20260722-25.el10                                baseos                 3.3 M
+ glib-networking                                 x86_64              2.80.0-3.el10                                   baseos                 204 k
+ intel-audio-firmware                            noarch              20260722-25.el10                                baseos                 3.3 M
+ intel-gpu-firmware                              noarch              20260722-25.el10                                appstream              8.9 M
+ kernel-debug-modules-extra                      x86_64              6.12.0-251.el10                                 baseos                 3.6 M
+ kpartx                                          x86_64              0.9.9-19.el10                                   baseos                  53 k
+ libguestfs-xfs                                  x86_64              1:1.60.1-1.el10                                 appstream              9.7 k
+ libvirt-client                                  x86_64              12.5.0-1.el10                                   appstream              465 k
+ libvirt-daemon-config-network                   x86_64              12.5.0-1.el10                                   appstream               35 k
+ linux-firmware                                  noarch              20260722-25.el10                                baseos                  63 M
+ memstrack                                       x86_64              0.2.5-6.el10                                    appstream               50 k
+ mt7xxx-firmware                                 noarch              20260722-25.el10                                baseos                  32 M
+ nbdkit                                          x86_64              1.46.2-1.el10                                   appstream              6.6 k
+ nbdkit-curl-plugin                              x86_64              1.46.2-1.el10                                   appstream               41 k
+ nbdkit-ssh-plugin                               x86_64              1.46.2-1.el10                                   appstream               31 k
+ nfs-utils                                       x86_64              1:2.8.3-8.el10                                  baseos                 490 k
+ nvidia-gpu-firmware                             noarch              20260722-25.el10                                appstream               99 M
+ nxpwireless-firmware                            noarch              20260722-25.el10                                baseos                 1.6 M
+ passt-selinux                                   noarch              0^20260611.ga9c61ff-1.el10                      appstream               26 k
+ pigz                                            x86_64              2.8-7.el10                                      baseos                  98 k
+ polkit-pkla-compat                              x86_64              0.1-30.el10                                     baseos                  48 k
+ realtek-firmware                                noarch              20260722-25.el10                                baseos                 5.8 M
+ tiwilink-firmware                               noarch              20260722-25.el10                                baseos                 4.7 M
+ unbound-anchor                                  x86_64              1.25.1-1.el10                                   baseos                  35 k
+
+BUILDARCH=x86_64
+CENTOS_VERSION=20260720.0
+
+> curl --fail-with-body --retry 2 -LR -o box.qcow2 https://cloud.centos.org/centos/9-stream/$BUILDARCH/images/CentOS-Stream-GenericCloud-9-$CENTOS_VERSION.$BUILDARCH.qcow2
+
+> export LIBGUESTFS_BACKEND=direct LIBGUESTFS_DEBUG=1 LIBGUESTFS_TRACE=1
+> guestfish --ro --add box.qcow2 --mount /dev/sda1:/ ls /boot/ | grep -E '^vmlinuz-|^initramfs-' | xargs -I {} guestfish --ro --add box.qcow2 -i copy-out /boot/{} /
+
+libguestfs: trace: set_verbose true
+libguestfs: trace: set_verbose = 0
+libguestfs: trace: set_backend "direct"
+libguestfs: trace: set_backend = 0
+libguestfs: create: flags = 0, handle = 0x5637295c2290, program = guestfish
+libguestfs: trace: add_drive "box.qcow2" "readonly:true"
+libguestfs: creating COW overlay to protect original drive content
+libguestfs: trace: get_tmpdir
+libguestfs: trace: get_tmpdir = "/tmp"
+libguestfs: trace: disk_create "/tmp/libguestfsqHB29U/overlay1.qcow2" "qcow2" -1 "backingfile:/box.qcow2"
+libguestfs: trace: disk_format "/box.qcow2"
+libguestfs: command: run: qemu-img --help | grep -sqE -- '\binfo\b.*-U\b'
+libguestfs: command: run: qemu-img
+libguestfs: command: run: \ info
+libguestfs: command: run: \ --output json
+libguestfs: command: run: \ /box.qcow2
+libguestfs: parse_json: qemu-img info JSON output:\n{\n    "children": [\n        {\n            "name": "file",\n            "info": {\n                "children": [\n                ],\n                "virtual-size": 1508353024,\n                "filename": "/box.qcow2",\n                "format": "file",\n                "actual-size": 1508356096,\n                "format-specific": {\n                    "type": "file",\n                    "data": {\n                    }\n                },\n                "dirty-flag": false\n            }\n        }\n    ],\n    "virtual-size": 10737418240,\n    "filename": "/box.qcow2",\n    "cluster-size": 65536,\n    "format": "qcow2",\n    "actual-size": 1508356096,\n    "format-specific": {\n        "type": "qcow2",\n        "data": {\n            "compat": "0.10",\n            "compression-type": "zlib",\n            "refcount-bits": 16\n        }\n    },\n    "dirty-flag": false\n}\n\n
+libguestfs: trace: disk_format = "qcow2"
+libguestfs: command: run: qemu-img
+libguestfs: command: run: \ create
+libguestfs: command: run: \ -f qcow2
+libguestfs: command: run: \ -o backing_file=/box.qcow2,backing_fmt=qcow2
+libguestfs: command: run: \ /tmp/libguestfsqHB29U/overlay1.qcow2
+libguestfs: Formatting '/tmp/libguestfsqHB29U/overlay1.qcow2', fmt=qcow2 cluster_size=65536 extended_l2=off compression_type=zlib size=10737418240 backing_file=/box.qcow2 backing_fmt=qcow2 lazy_refcounts=off refcount_bits=16\n
+libguestfs: trace: disk_create = 0
+libguestfs: trace: add_drive = 0
+libguestfs: trace: is_config
+libguestfs: trace: is_config = 1
+libguestfs: trace: launch
+libguestfs: trace: max_disks
+libguestfs: trace: max_disks = 255
+libguestfs: trace: version
+libguestfs: trace: version = <struct guestfs_version = major: 1, minor: 60, release: 1, extra: rhel=10,release=1.el10,libvirt, >
+libguestfs: trace: get_backend
+libguestfs: trace: get_backend = "direct"
+libguestfs: launch: program=guestfish
+libguestfs: launch: version=1.60.1rhel=10,release=1.el10,libvirt
+libguestfs: launch: backend registered: direct
+libguestfs: launch: backend registered: libvirt
+libguestfs: launch: backend=direct
+libguestfs: launch: tmpdir=/tmp/libguestfsqHB29U
+libguestfs: launch: umask=0022
+libguestfs: launch: euid=0
+libguestfs: launch: host: Linux 5e39eeb9a2f1 5.14.0-687.5.1.el9_8.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Apr 1 07:10:58 EDT 2026 x86_64
+libguestfs: trace: get_cachedir
+libguestfs: trace: get_cachedir = "/var/tmp"
+libguestfs: begin building supermin appliance
+libguestfs: run supermin
+libguestfs: command: run: /usr/bin/supermin
+libguestfs: command: run: \ --build
+libguestfs: command: run: \ --verbose
+libguestfs: command: run: \ --if-newer
+libguestfs: command: run: \ --lock /var/tmp/.guestfs-0/lock
+libguestfs: command: run: \ --copy-kernel
+libguestfs: command: run: \ -f ext2
+libguestfs: command: run: \ --host-cpu x86_64
+libguestfs: command: run: \ /usr/lib64/guestfs/supermin.d
+libguestfs: command: run: \ -o /var/tmp/.guestfs-0/appliance.d
+supermin: version: 5.3.5
+supermin: rpm: detected RPM version 4.19
+supermin: rpm: detected RPM architecture x86_64
+supermin: package handler: fedora/rpm
+supermin: acquiring lock on /var/tmp/.guestfs-0/lock
+supermin: build: /usr/lib64/guestfs/supermin.d
+supermin: reading the supermin appliance
+supermin: build: visiting /usr/lib64/guestfs/supermin.d/base.tar.gz type gzip base image (tar)
+supermin: build: visiting /usr/lib64/guestfs/supermin.d/daemon.tar.gz type gzip base image (tar)
+supermin: build: visiting /usr/lib64/guestfs/supermin.d/excludefiles type uncompressed excludefiles
+supermin: build: visiting /usr/lib64/guestfs/supermin.d/hostfiles type uncompressed hostfiles
+supermin: build: visiting /usr/lib64/guestfs/supermin.d/init.tar.gz type gzip base image (tar)
+supermin: build: visiting /usr/lib64/guestfs/supermin.d/packages type uncompressed packages
+supermin: build: visiting /usr/lib64/guestfs/supermin.d/udev-rules.tar.gz type gzip base image (tar)
+supermin: build: visiting /usr/lib64/guestfs/supermin.d/zz-packages-xfs type uncompressed packages
+supermin: mapping package names to installed packages
+supermin: resolving full list of package dependencies
+supermin: build: 179 packages, including dependencies
+supermin: build: 35149 files
+supermin: build: 12023 files, after matching excludefiles
+supermin: build: 12032 files, after adding hostfiles
+supermin: build: 11999 files, after removing unreadable files
+supermin: build: 12022 files, after munging
+supermin: kernel: looking for kernel using environment variables ...
+supermin: kernel: looking for kernels in /lib/modules/*/vmlinuz ...
+supermin: kernel: looking for kernels in /boot ...
+supermin: failed to find a suitable kernel (host_cpu=x86_64).
+
+I looked for kernels in /boot and modules in /lib/modules.
+
+If this is a Xen guest, and you only have Xen domU kernels
+installed, try installing a fullvirt kernel (only for
+supermin use, you shouldn't boot the Xen guest with it).
+libguestfs: error: /usr/bin/supermin exited with error status 1, see debug messages above
+libguestfs: trace: launch = -1 (error)
+libguestfs: trace: close
+libguestfs: closing guestfs handle 0x5637295c2290 (state 0)
+libguestfs: command: run: rm
+libguestfs: command: run: \ -rf /tmp/libguestfsqHB29U
