@@ -1,0 +1,191 @@
+SR-IOV
+======
+
+qemu-10.1.5-1.fc43:
+- https://koji.fedoraproject.org/koji/buildinfo?buildID=2965689
+- https://src.fedoraproject.org/rpms/qemu/c/4388785fea218e42434e47916ca166b0a766cb66
+
+KUBEVIRTCI_TAG=2607080711-242cd8d2
+
+./kubevirtci/cluster-up/ssh.sh node03
+
+> ip link show dev sriov0
+
+3: sriov0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 52:55:00:d1:57:03 brd ff:ff:ff:ff:ff:ff
+    vf 0     link/ether fa:f9:78:ca:51:23 brd ff:ff:ff:ff:ff:ff, spoof checking on, link-state auto, trust off
+    vf 1     link/ether 2e:ee:0f:b4:5b:fd brd ff:ff:ff:ff:ff:ff, spoof checking on, link-state auto, trust off
+    vf 2     link/ether be:ca:c2:ec:5c:85 brd ff:ff:ff:ff:ff:ff, spoof checking on, link-state auto, trust off
+    vf 3     link/ether de:6e:a9:de:68:a3 brd ff:ff:ff:ff:ff:ff, spoof checking on, link-state auto, trust off
+    vf 4     link/ether 76:52:bc:c6:bd:fa brd ff:ff:ff:ff:ff:ff, spoof checking on, link-state auto, trust off
+    vf 5     link/ether b2:57:a8:ca:ad:97 brd ff:ff:ff:ff:ff:ff, spoof checking on, link-state auto, trust off
+    vf 6     link/ether 86:d0:fe:2d:82:6b brd ff:ff:ff:ff:ff:ff, spoof checking on, link-state auto, trust off
+    altname enp129s0
+    altname ens3
+
+> grep . /sys/class/net/sriov0/device/sriov_*
+
+/sys/class/net/sriov0/device/sriov_drivers_autoprobe:1
+/sys/class/net/sriov0/device/sriov_numvfs:7
+/sys/class/net/sriov0/device/sriov_offset:128
+/sys/class/net/sriov0/device/sriov_stride:2
+/sys/class/net/sriov0/device/sriov_totalvfs:7
+/sys/class/net/sriov0/device/sriov_vf_device:10ca
+/sys/class/net/sriov0/device/sriov_vf_total_msix:0
+
+> ethtool sriov0
+
+Settings for sriov0:
+	Supported ports: [ TP ]
+	Supported link modes:   10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
+	Supported pause frame use: Symmetric
+	Supports auto-negotiation: Yes
+	Supported FEC modes: Not reported
+	Advertised link modes:  10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
+	Advertised pause frame use: Symmetric
+	Advertised auto-negotiation: Yes
+	Advertised FEC modes: Not reported
+	Speed: 1000Mb/s
+	Duplex: Full
+	Auto-negotiation: on
+	Port: Twisted Pair
+	PHYAD: 1
+	Transceiver: internal
+	MDI-X: off (auto)
+	Supports Wake-on: pumbg
+	Wake-on: g
+        Current message level: 0x00000007 (7)
+                               drv probe link
+	Link detected: yes
+
+> lspci -tvnn
+
+-+-[0000:80]---00.0-[81]--+-00.0  Intel Corporation 82576 Gigabit Network Connection [8086:10c9]
+ |                        +-10.0  Intel Corporation 82576 Virtual Function [8086:10ca]
+ |                        +-10.2  Intel Corporation 82576 Virtual Function [8086:10ca]
+ |                        +-10.4  Intel Corporation 82576 Virtual Function [8086:10ca]
+ |                        +-10.6  Intel Corporation 82576 Virtual Function [8086:10ca]
+ |                        +-11.0  Intel Corporation 82576 Virtual Function [8086:10ca]
+ |                        +-11.2  Intel Corporation 82576 Virtual Function [8086:10ca]
+ |                        \-11.4  Intel Corporation 82576 Virtual Function [8086:10ca]
+ \-[0000:00]-+-00.0  Intel Corporation 82G33/G31/P35/P31 Express DRAM Controller [8086:29c0]
+             +-01.0  Device [1234:1111]
+             +-02.0  Red Hat, Inc. Virtio block device [1af4:1001]
+             +-03.0  Red Hat, Inc. Virtio network device [1af4:1000]
+             +-04.0  Red Hat, Inc. QEMU PCIe Expander bridge [1b36:000b]
+             +-05.0  Red Hat, Inc. Virtio RNG [1af4:1005]
+             +-06.0  Intel Corporation 82801FB/FBM/FR/FW/FRW (ICH6 Family) High Definition Audio Controller [8086:2668]
+             +-07.0  Intel Corporation 82801AA AC'97 Audio Controller [8086:2415]
+             +-1f.0  Intel Corporation 82801IB (ICH9) LPC Interface Controller [8086:2918]
+             +-1f.2  Intel Corporation 82801IR/IO/IH (ICH9R/DO/DH) 6 port SATA Controller [AHCI mode] [8086:2922]
+             \-1f.3  Intel Corporation 82801I (ICH9 Family) SMBus Controller [8086:2930]
+
+> lspci -kvnn -d 8086:10c9
+
+81:00.0 Ethernet controller [0200]: Intel Corporation 82576 Gigabit Network Connection [8086:10c9] (rev 01)
+	Subsystem: Red Hat, Inc. Device [1af4:1100]
+	Physical Slot: 3
+	Flags: bus master, fast devsel, latency 0, IRQ 11, NUMA node 0, IOMMU group 10
+	Memory at fe800000 (32-bit, non-prefetchable) [size=128K]
+	Memory at fe820000 (32-bit, non-prefetchable) [size=128K]
+	I/O ports at c000 [size=32]
+	Memory at fe840000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: [40] Power Management version 2
+	Capabilities: [50] MSI: Enable- Count=1/1 Maskable+ 64bit+
+	Capabilities: [70] MSI-X: Enable+ Count=10 Masked-
+	Capabilities: [a0] Express Endpoint, MSI 00
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [150] Alternative Routing-ID Interpretation (ARI)
+	Capabilities: [160] Single Root I/O Virtualization (SR-IOV)
+	Kernel driver in use: igb
+	Kernel modules: igb
+
+> lspci -kvnn -d 8086:10ca
+
+81:10.0 Ethernet controller [0200]: Intel Corporation 82576 Virtual Function [8086:10ca] (rev 01)
+	Subsystem: Red Hat, Inc. Device [1af4:1100]
+	Flags: fast devsel, NUMA node 0, IOMMU group 11
+	Memory at e0000000000 (64-bit, prefetchable) [virtual] [size=16K]
+	Memory at e0000020000 (64-bit, prefetchable) [virtual] [size=16K]
+	Capabilities: [a0] Express Endpoint, MSI 00
+	Capabilities: [70] MSI-X: Enable- Count=3 Masked-
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [150] Alternative Routing-ID Interpretation (ARI)
+	Kernel driver in use: vfio-pci
+	Kernel modules: igbvf
+
+81:10.2 Ethernet controller [0200]: Intel Corporation 82576 Virtual Function [8086:10ca] (rev 01)
+	Subsystem: Red Hat, Inc. Device [1af4:1100]
+	Flags: fast devsel, NUMA node 0, IOMMU group 12
+	Memory at e0000004000 (64-bit, prefetchable) [virtual] [size=16K]
+	Memory at e0000024000 (64-bit, prefetchable) [virtual] [size=16K]
+	Capabilities: [a0] Express Endpoint, MSI 00
+	Capabilities: [70] MSI-X: Enable- Count=3 Masked-
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [150] Alternative Routing-ID Interpretation (ARI)
+	Kernel driver in use: vfio-pci
+	Kernel modules: igbvf
+
+81:10.4 Ethernet controller [0200]: Intel Corporation 82576 Virtual Function [8086:10ca] (rev 01)
+	Subsystem: Red Hat, Inc. Device [1af4:1100]
+	Flags: fast devsel, NUMA node 0, IOMMU group 13
+	Memory at e0000008000 (64-bit, prefetchable) [virtual] [size=16K]
+	Memory at e0000028000 (64-bit, prefetchable) [virtual] [size=16K]
+	Capabilities: [a0] Express Endpoint, MSI 00
+	Capabilities: [70] MSI-X: Enable- Count=3 Masked-
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [150] Alternative Routing-ID Interpretation (ARI)
+	Kernel driver in use: vfio-pci
+	Kernel modules: igbvf
+
+81:10.6 Ethernet controller [0200]: Intel Corporation 82576 Virtual Function [8086:10ca] (rev 01)
+	Subsystem: Red Hat, Inc. Device [1af4:1100]
+	Flags: fast devsel, NUMA node 0, IOMMU group 14
+	Memory at e000000c000 (64-bit, prefetchable) [virtual] [size=16K]
+	Memory at e000002c000 (64-bit, prefetchable) [virtual] [size=16K]
+	Capabilities: [a0] Express Endpoint, MSI 00
+	Capabilities: [70] MSI-X: Enable- Count=3 Masked-
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [150] Alternative Routing-ID Interpretation (ARI)
+	Kernel driver in use: vfio-pci
+	Kernel modules: igbvf
+
+81:11.0 Ethernet controller [0200]: Intel Corporation 82576 Virtual Function [8086:10ca] (rev 01)
+	Subsystem: Red Hat, Inc. Device [1af4:1100]
+	Flags: fast devsel, NUMA node 0, IOMMU group 15
+	Memory at e0000010000 (64-bit, prefetchable) [virtual] [size=16K]
+	Memory at e0000030000 (64-bit, prefetchable) [virtual] [size=16K]
+	Capabilities: [a0] Express Endpoint, MSI 00
+	Capabilities: [70] MSI-X: Enable- Count=3 Masked-
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [150] Alternative Routing-ID Interpretation (ARI)
+	Kernel driver in use: vfio-pci
+	Kernel modules: igbvf
+
+81:11.2 Ethernet controller [0200]: Intel Corporation 82576 Virtual Function [8086:10ca] (rev 01)
+	Subsystem: Red Hat, Inc. Device [1af4:1100]
+	Flags: fast devsel, NUMA node 0, IOMMU group 16
+	Memory at e0000014000 (64-bit, prefetchable) [virtual] [size=16K]
+	Memory at e0000034000 (64-bit, prefetchable) [virtual] [size=16K]
+	Capabilities: [a0] Express Endpoint, MSI 00
+	Capabilities: [70] MSI-X: Enable- Count=3 Masked-
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [150] Alternative Routing-ID Interpretation (ARI)
+	Kernel driver in use: vfio-pci
+	Kernel modules: igbvf
+
+81:11.4 Ethernet controller [0200]: Intel Corporation 82576 Virtual Function [8086:10ca] (rev 01)
+	Subsystem: Red Hat, Inc. Device [1af4:1100]
+	Flags: fast devsel, NUMA node 0, IOMMU group 17
+	Memory at e0000018000 (64-bit, prefetchable) [virtual] [size=16K]
+	Memory at e0000038000 (64-bit, prefetchable) [virtual] [size=16K]
+	Capabilities: [a0] Express Endpoint, MSI 00
+	Capabilities: [70] MSI-X: Enable- Count=3 Masked-
+	Capabilities: [100] Advanced Error Reporting
+	Capabilities: [150] Alternative Routing-ID Interpretation (ARI)
+	Kernel driver in use: vfio-pci
+	Kernel modules: igbvf
