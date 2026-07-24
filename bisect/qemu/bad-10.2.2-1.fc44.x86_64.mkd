@@ -1,0 +1,1255 @@
+# https://cloud.centos.org/centos/9-stream/x86_64/images/
+CENTOS9_VERSION=20260506.0
+CENTOS9_TAG=2605120400-652a6d40
+KUBEVIRTCI_TAG=2605121213-3c9d7dff
+
+qemu-10.2.2-1.fc44.x86_64
+
+acl-2.3.1-4.el9.x86_64
+alternatives-1.24-2.el9.x86_64
+attr-2.5.1-3.el9.x86_64
+audit-3.1.5-8.el9.x86_64
+audit-libs-3.1.5-8.el9.x86_64
+authselect-1.2.6-3.el9.x86_64
+authselect-compat-1.2.6-3.el9.x86_64
+authselect-libs-1.2.6-3.el9.x86_64
+basesystem-11-13.el9.noarch
+bash-5.1.8-9.el9.x86_64
+binutils-2.35.2-72.el9.x86_64
+binutils-gold-2.35.2-72.el9.x86_64
+bzip2-libs-1.0.8-11.el9.x86_64
+ca-certificates-2025.2.80_v9.0.305-91.el9.noarch
+c-ares-1.19.1-2.el9.x86_64
+centos-gpg-keys-9.0-36.el9.noarch
+centos-logos-90.9-1.el9.x86_64
+centos-release-nfv-common-1-5.el9s.noarch
+centos-release-nfv-openvswitch-1-5.el9s.noarch
+centos-stream-release-9.0-36.el9.noarch
+centos-stream-repos-9.0-36.el9.noarch
+checkpolicy-3.6-1.el9.x86_64
+chrony-4.8-1.el9.x86_64
+cloud-init-24.4-8.el9.noarch
+cloud-utils-growpart-0.33-1.el9.x86_64
+cockpit-bridge-359-1.el9.noarch
+cockpit-system-359-1.el9.noarch
+cockpit-ws-359-1.el9.x86_64
+cockpit-ws-selinux-359-1.el9.x86_64
+container-selinux-2.247.0-1.el9.noarch
+coreutils-8.32-40.el9.x86_64
+coreutils-common-8.32-40.el9.x86_64
+cpio-2.13-16.el9.x86_64
+cracklib-2.9.6-28.el9.x86_64
+cracklib-dicts-2.9.6-28.el9.x86_64
+cri-o-1.36.0~dev-150500.76.1.x86_64
+cri-tools-1.36.0-150500.1.1.x86_64
+cronie-1.5.7-16.el9.x86_64
+cronie-anacron-1.5.7-16.el9.x86_64
+crontabs-1.11-26.20190603git.el9.noarch
+crypto-policies-20260224-1.gitea0f072.el9.noarch
+crypto-policies-scripts-20260224-1.gitea0f072.el9.noarch
+cryptsetup-libs-2.8.1-3.el9.x86_64
+curl-7.76.1-41.el9.x86_64
+cyrus-sasl-lib-2.1.27-21.el9.x86_64
+dbus-1.12.20-9.el9.x86_64
+dbus-broker-28-7.el9.x86_64
+dbus-common-1.12.20-9.el9.noarch
+dbus-libs-1.12.20-9.el9.x86_64
+dbus-tools-1.12.20-9.el9.x86_64
+dejavu-sans-fonts-2.37-18.el9.noarch
+device-mapper-1.02.207-4.el9.x86_64
+device-mapper-event-1.02.207-4.el9.x86_64
+device-mapper-event-libs-1.02.207-4.el9.x86_64
+device-mapper-libs-1.02.207-4.el9.x86_64
+device-mapper-persistent-data-1.1.0-1.el9.x86_64
+dhcp-client-4.4.2-20.b1.el9.x86_64
+dhcp-common-4.4.2-20.b1.el9.noarch
+diffutils-3.7-12.el9.x86_64
+dnf-4.14.0-35.el9.noarch
+dnf-data-4.14.0-35.el9.noarch
+dnf-plugins-core-4.3.0-26.el9.noarch
+dracut-057-110.git20260130.el9.x86_64
+dracut-config-generic-057-110.git20260130.el9.x86_64
+dracut-network-057-110.git20260130.el9.x86_64
+dracut-squash-057-110.git20260130.el9.x86_64
+e2fsprogs-1.46.5-8.el9.x86_64
+e2fsprogs-libs-1.46.5-8.el9.x86_64
+ed-1.14.2-12.el9.x86_64
+elfutils-debuginfod-client-0.195-1.el9.x86_64
+elfutils-default-yama-scope-0.195-1.el9.noarch
+elfutils-libelf-0.195-1.el9.x86_64
+elfutils-libs-0.195-1.el9.x86_64
+ethtool-6.19-1.el9.x86_64
+expat-2.5.0-6.el9.x86_64
+file-5.39-18.el9.x86_64
+file-libs-5.39-18.el9.x86_64
+filesystem-3.16-5.el9.x86_64
+findutils-4.8.0-7.el9.x86_64
+fonts-filesystem-2.0.5-7.el9.1.noarch
+fuse-libs-2.9.9-17.el9.x86_64
+gawk-5.1.0-6.el9.x86_64
+gawk-all-langpacks-5.1.0-6.el9.x86_64
+gdbm-libs-1.23-1.el9.x86_64
+gdisk-1.0.7-5.el9.x86_64
+geolite2-city-20191217-6.el9.noarch
+geolite2-country-20191217-6.el9.noarch
+gettext-0.21-8.el9.x86_64
+gettext-libs-0.21-8.el9.x86_64
+glib2-2.68.4-19.el9.x86_64
+glibc-2.34-262.el9.x86_64
+glibc-common-2.34-262.el9.x86_64
+glibc-gconv-extra-2.34-262.el9.x86_64
+glibc-langpack-en-2.34-262.el9.x86_64
+gmp-6.2.0-13.el9.x86_64
+gnupg2-2.3.3-5.el9.x86_64
+gnutls-3.8.10-4.el9.x86_64
+gobject-introspection-1.68.0-11.el9.x86_64
+gpgme-1.15.1-6.el9.x86_64
+gpg-pubkey-1d997668-621e3cac
+gpg-pubkey-8483c65d-5ccc5b19
+gpg-pubkey-9d2a76a7-62206d8c
+grep-3.6-5.el9.x86_64
+groff-base-1.22.4-10.el9.x86_64
+grub2-common-2.06-126.el9.noarch
+grub2-pc-2.06-126.el9.x86_64
+grub2-pc-modules-2.06-126.el9.noarch
+grub2-tools-2.06-126.el9.x86_64
+grub2-tools-minimal-2.06-126.el9.x86_64
+grubby-8.40-69.el9.x86_64
+gssproxy-0.8.4-7.el9.x86_64
+gzip-1.12-1.el9.x86_64
+hostname-3.23-6.el9.x86_64
+hwdata-0.348-9.22.el9.noarch
+ima-evm-utils-1.6.2-3.el9.x86_64
+info-6.7-15.el9.x86_64
+inih-49-6.el9.x86_64
+initscripts-rename-device-10.11.9-2.el9.x86_64
+initscripts-service-10.11.9-2.el9.noarch
+ipcalc-1.0.0-5.el9.x86_64
+iproute-6.17.0-2.el9.x86_64
+iproute-tc-6.17.0-2.el9.x86_64
+iptables-libs-1.8.10-11.el9.x86_64
+iptables-nft-1.8.10-11.el9.x86_64
+iputils-20210202-15.el9.x86_64
+irqbalance-1.9.4-5.el9.x86_64
+iscsi-initiator-utils-6.2.1.11-0.git4b3e853.el9.x86_64
+iscsi-initiator-utils-iscsiuio-6.2.1.11-0.git4b3e853.el9.x86_64
+isns-utils-libs-0.101-4.el9.x86_64
+jansson-2.14-1.el9.x86_64
+jq-1.6-21.el9.x86_64
+json-c-0.14-11.el9.x86_64
+json-glib-1.6.6-1.el9.x86_64
+kbd-2.4.0-11.el9.x86_64
+kbd-legacy-2.4.0-11.el9.noarch
+kbd-misc-2.4.0-11.el9.noarch
+kernel-5.14.0-701.el9.x86_64
+kernel-core-5.14.0-701.el9.x86_64
+kernel-modules-5.14.0-701.el9.x86_64
+kernel-modules-core-5.14.0-701.el9.x86_64
+kernel-tools-5.14.0-701.el9.x86_64
+kernel-tools-libs-5.14.0-701.el9.x86_64
+kexec-tools-2.0.29-17.el9.x86_64
+keyutils-1.6.3-1.el9.x86_64
+keyutils-libs-1.6.3-1.el9.x86_64
+kmod-28-11.el9.x86_64
+kmod-libs-28-11.el9.x86_64
+kpartx-0.8.7-46.el9.x86_64
+krb5-libs-1.21.1-10.el9.x86_64
+kubeadm-1.36.0-150500.1.1.x86_64
+kubectl-1.36.0-150500.1.1.x86_64
+kubelet-1.36.0-150500.1.1.x86_64
+kubernetes-cni-1.9.1-150500.1.1.x86_64
+langpacks-core-en_GB-3.0-16.el9.noarch
+langpacks-core-font-en-3.0-16.el9.noarch
+langpacks-en_GB-3.0-16.el9.noarch
+less-590-6.el9.x86_64
+libacl-2.3.1-4.el9.x86_64
+libaio-0.3.111-13.el9.x86_64
+libarchive-3.5.3-9.el9.x86_64
+libassuan-2.5.5-3.el9.x86_64
+libattr-2.5.1-3.el9.x86_64
+libbasicobjects-0.1.1-53.el9.x86_64
+libblkid-2.37.4-25.el9.x86_64
+libbpf-1.5.0-3.el9.x86_64
+libbrotli-1.0.9-9.el9.x86_64
+libcap-2.48-10.el9.x86_64
+libcap-ng-0.8.2-7.el9.x86_64
+libcbor-0.7.0-5.el9.x86_64
+libcollection-0.7.0-53.el9.x86_64
+libcom_err-1.46.5-8.el9.x86_64
+libcomps-0.1.18-1.el9.x86_64
+libcurl-7.76.1-41.el9.x86_64
+libdaemon-0.14-23.el9.x86_64
+libdb-5.3.28-57.el9.x86_64
+libdhash-0.5.0-53.el9.x86_64
+libdnf-0.69.0-18.el9.x86_64
+libeconf-0.4.1-5.el9.x86_64
+libedit-3.1-39.20210216cvs.el9.x86_64
+libestr-0.1.11-4.el9.x86_64
+libev-4.33-6.el9.x86_64
+libevent-2.1.12-8.el9.x86_64
+libfastjson-0.99.9-5.el9.x86_64
+libfdisk-2.37.4-25.el9.x86_64
+libffi-3.4.2-8.el9.x86_64
+libfido2-1.13.0-2.el9.x86_64
+libgcc-11.5.0-14.el9.x86_64
+libgcrypt-1.10.0-11.el9.x86_64
+libgomp-11.5.0-14.el9.x86_64
+libgpg-error-1.42-5.el9.x86_64
+libibverbs-61.0-2.el9.x86_64
+libidn2-2.3.0-7.el9.x86_64
+libini_config-1.3.1-53.el9.x86_64
+libkcapi-1.4.0-2.el9.x86_64
+libkcapi-hmaccalc-1.4.0-2.el9.x86_64
+libksba-1.5.1-7.el9.x86_64
+libldb-4.23.5-6.el9.x86_64
+libmaxminddb-1.5.2-4.el9.x86_64
+libmnl-1.0.4-16.el9.x86_64
+libmodulemd-2.13.0-2.el9.x86_64
+libmount-2.37.4-25.el9.x86_64
+libndp-1.9-1.el9.x86_64
+libnetfilter_conntrack-1.0.9-1.el9.x86_64
+libnfnetlink-1.0.1-23.el9.x86_64
+libnfsidmap-2.5.4-43.el9.x86_64
+libnftnl-1.2.6-4.el9.x86_64
+libnghttp2-1.43.0-7.el9.x86_64
+libnl3-3.11.0-1.el9.x86_64
+libnl3-cli-3.11.0-1.el9.x86_64
+libnvme-1.16.1-3.el9.x86_64
+libpath_utils-0.2.1-53.el9.x86_64
+libpcap-1.10.0-4.el9.x86_64
+libpipeline-1.5.3-4.el9.x86_64
+libpkgconf-1.7.3-10.el9.x86_64
+libpsl-0.21.1-5.el9.x86_64
+libpwquality-1.4.4-8.el9.x86_64
+libref_array-0.1.5-53.el9.x86_64
+librepo-1.19.0-1.el9.x86_64
+libreport-filesystem-2.15.2-6.el9.noarch
+libseccomp-2.5.2-2.el9.x86_64
+libseccomp-devel-2.5.2-2.el9.x86_64
+libselinux-3.6-3.el9.x86_64
+libselinux-utils-3.6-3.el9.x86_64
+libsemanage-3.6-5.el9.x86_64
+libsepol-3.6-3.el9.x86_64
+libsigsegv-2.13-4.el9.x86_64
+libsmartcols-2.37.4-25.el9.x86_64
+libsolv-0.7.24-4.el9.x86_64
+libss-1.46.5-8.el9.x86_64
+libssh-0.10.4-18.el9.x86_64
+libssh-config-0.10.4-18.el9.noarch
+libsss_certmap-2.9.8-2.el9.x86_64
+libsss_idmap-2.9.8-2.el9.x86_64
+libsss_nss_idmap-2.9.8-2.el9.x86_64
+libsss_sudo-2.9.8-2.el9.x86_64
+libstdc++-11.5.0-14.el9.x86_64
+libsysfs-2.1.1-11.el9.x86_64
+libtalloc-2.4.3-1.el9.x86_64
+libtasn1-4.16.0-9.el9.x86_64
+libtdb-1.4.14-1.el9.x86_64
+libteam-1.31-16.el9.x86_64
+libtevent-0.17.1-1.el9.x86_64
+libtirpc-1.3.3-9.el9.x86_64
+libtool-ltdl-2.4.6-46.el9.x86_64
+libunistring-0.9.10-15.el9.x86_64
+liburing-2.12-1.el9.x86_64
+libuser-0.63-17.el9.x86_64
+libutempter-1.2.1-6.el9.x86_64
+libuuid-2.37.4-25.el9.x86_64
+libverto-0.3.2-3.el9.x86_64
+libverto-libev-0.3.2-3.el9.x86_64
+libxcrypt-4.4.18-3.el9.x86_64
+libxcrypt-compat-4.4.18-3.el9.x86_64
+libxml2-2.9.13-14.el9.x86_64
+libyaml-0.2.5-7.el9.x86_64
+libzstd-1.5.5-1.el9.x86_64
+lmdb-libs-0.9.29-3.el9.x86_64
+logrotate-3.18.0-12.el9.x86_64
+lshw-B.02.20-4.el9.x86_64
+lsscsi-0.32-6.el9.x86_64
+lua-libs-5.4.4-4.el9.x86_64
+lvm2-2.03.33-4.el9.x86_64
+lvm2-libs-2.03.33-4.el9.x86_64
+lz4-libs-1.9.3-5.el9.x86_64
+lzo-2.10-7.el9.x86_64
+man-db-2.9.3-9.el9.x86_64
+microcode_ctl-20260210-1.el9.noarch
+mpfr-4.1.0-10.el9.x86_64
+ncurses-6.2-12.20210508.el9.x86_64
+ncurses-base-6.2-12.20210508.el9.noarch
+ncurses-libs-6.2-12.20210508.el9.x86_64
+nettle-3.10.1-1.el9.x86_64
+NetworkManager-1.54.3-2.el9.x86_64
+NetworkManager-config-server-1.54.3-2.el9.noarch
+NetworkManager-libnm-1.54.3-2.el9.x86_64
+NetworkManager-ovs-1.54.3-2.el9.x86_64
+NetworkManager-team-1.54.3-2.el9.x86_64
+NetworkManager-tui-1.54.3-2.el9.x86_64
+newt-0.52.21-11.el9.x86_64
+nfs-utils-2.5.4-43.el9.x86_64
+nftables-1.0.9-6.el9.x86_64
+npth-1.6-8.el9.x86_64
+numactl-libs-2.0.19-3.el9.x86_64
+oddjob-0.34.7-7.el9.x86_64
+oddjob-mkhomedir-0.34.7-7.el9.x86_64
+oniguruma-6.9.6-1.el9.6.x86_64
+openldap-2.6.13-1.el9.x86_64
+openssh-9.9p1-8.el9.x86_64
+openssh-clients-9.9p1-8.el9.x86_64
+openssh-server-9.9p1-8.el9.x86_64
+openssl-3.5.5-1.el9.x86_64
+openssl-fips-provider-3.5.5-1.el9.x86_64
+openssl-libs-3.5.5-1.el9.x86_64
+openvswitch2.16-2.16.0-117.el9s.x86_64
+openvswitch-selinux-extra-policy-1.0-36.el9s.noarch
+os-prober-1.77-12.el9.x86_64
+p11-kit-0.26.2-1.el9.x86_64
+p11-kit-trust-0.26.2-1.el9.x86_64
+pam-1.5.1-29.el9.x86_64
+parted-3.5-3.el9.x86_64
+passwd-0.80-12.el9.x86_64
+patch-2.7.6-16.el9.x86_64
+pciutils-3.7.0-7.el9.x86_64
+pciutils-libs-3.7.0-7.el9.x86_64
+pcre2-10.40-6.el9.x86_64
+pcre2-syntax-10.40-6.el9.noarch
+pcre-8.44-4.el9.x86_64
+pigz-2.5-4.el9.x86_64
+pkgconf-1.7.3-10.el9.x86_64
+pkgconf-m4-1.7.3-10.el9.noarch
+pkgconf-pkg-config-1.7.3-10.el9.x86_64
+policycoreutils-3.6-7.el9.x86_64
+policycoreutils-python-utils-3.6-7.el9.noarch
+polkit-0.117-14.el9.x86_64
+polkit-libs-0.117-14.el9.x86_64
+polkit-pkla-compat-0.1-21.el9.x86_64
+popt-1.18-8.el9.x86_64
+prefixdevname-0.1.0-8.el9.x86_64
+procps-ng-3.3.17-14.el9.x86_64
+protobuf-c-1.3.3-13.el9.x86_64
+psmisc-23.4-3.el9.x86_64
+publicsuffix-list-dafsa-20210518-3.el9.noarch
+python3-3.9.25-5.el9.x86_64
+python3-attrs-20.3.0-7.el9.noarch
+python3-audit-3.1.5-8.el9.x86_64
+python3-babel-2.9.1-2.el9.noarch
+python3-chardet-4.0.0-5.el9.noarch
+python3-configobj-5.0.6-25.el9.noarch
+python3-dasbus-1.7-1.el9.noarch
+python3-dateutil-2.9.0.post0-1.el9.noarch
+python3-dbus-1.2.18-2.el9.x86_64
+python3-distro-1.5.0-7.el9.noarch
+python3-dnf-4.14.0-35.el9.noarch
+python3-dnf-plugins-core-4.3.0-26.el9.noarch
+python3-file-magic-5.39-18.el9.noarch
+python3-gobject-base-3.40.1-6.el9.x86_64
+python3-gobject-base-noarch-3.40.1-6.el9.noarch
+python3-gpg-1.15.1-6.el9.x86_64
+python3-hawkey-0.69.0-18.el9.x86_64
+python3-idna-2.10-7.el9.1.noarch
+python3-jinja2-2.11.3-8.el9.noarch
+python3-jsonpatch-1.21-16.el9.noarch
+python3-jsonpointer-2.0-4.el9.noarch
+python3-jsonschema-3.2.0-13.el9.noarch
+python3-libcomps-0.1.18-1.el9.x86_64
+python3-libdnf-0.69.0-18.el9.x86_64
+python3-libs-3.9.25-5.el9.x86_64
+python3-libselinux-3.6-3.el9.x86_64
+python3-libsemanage-3.6-5.el9.x86_64
+python3-libxml2-2.9.13-14.el9.x86_64
+python3-markupsafe-1.1.1-12.el9.x86_64
+python3-netifaces-0.10.6-15.el9.x86_64
+python3-oauthlib-3.1.1-5.el9.noarch
+python3-pexpect-4.8.0-7.el9.noarch
+python3-pip-wheel-21.3.1-1.el9.noarch
+python3-policycoreutils-3.6-7.el9.noarch
+python3-prettytable-0.7.2-27.el9.noarch
+python3-ptyprocess-0.6.0-12.el9.noarch
+python3-pyrsistent-0.17.3-8.el9.x86_64
+python3-pyserial-3.4-12.el9.noarch
+python3-pysocks-1.7.1-12.el9.noarch
+python3-pytz-2021.1-5.el9.noarch
+python3-pyyaml-5.4.1-6.el9.x86_64
+python3-requests-2.25.1-10.el9.noarch
+python3-rpm-4.16.1.3-40.el9.x86_64
+python3-setools-4.4.4-1.el9.x86_64
+python3-setuptools-53.0.0-15.el9.noarch
+python3-setuptools-wheel-53.0.0-15.el9.noarch
+python3-six-1.15.0-9.el9.noarch
+python3-systemd-234-19.el9.x86_64
+python3-urllib3-1.26.5-7.el9.noarch
+python-unversioned-command-3.9.25-5.el9.noarch
+qemu-guest-agent-10.1.0-19.el9.x86_64
+quota-4.09-4.el9.x86_64
+quota-nls-4.09-4.el9.noarch
+readline-8.1-4.el9.x86_64
+rootfiles-8.1-35.el9.noarch
+rpcbind-1.2.6-7.el9.x86_64
+rpm-4.16.1.3-40.el9.x86_64
+rpm-build-libs-4.16.1.3-40.el9.x86_64
+rpm-libs-4.16.1.3-40.el9.x86_64
+rpm-plugin-audit-4.16.1.3-40.el9.x86_64
+rpm-plugin-selinux-4.16.1.3-40.el9.x86_64
+rpm-plugin-systemd-inhibit-4.16.1.3-40.el9.x86_64
+rpm-sign-libs-4.16.1.3-40.el9.x86_64
+rsync-3.2.5-5.el9.x86_64
+rsyslog-8.2510.0-2.el9.x86_64
+rsyslog-logrotate-8.2510.0-2.el9.x86_64
+sed-4.8-10.el9.x86_64
+selinux-policy-38.1.78-1.el9.noarch
+selinux-policy-targeted-38.1.78-1.el9.noarch
+setroubleshoot-plugins-3.3.14-4.el9.noarch
+setroubleshoot-server-3.3.35-2.el9.x86_64
+setup-2.13.7-10.el9.noarch
+sg3_utils-1.47-10.el9.x86_64
+sg3_utils-libs-1.47-10.el9.x86_64
+shadow-utils-4.9-16.el9.x86_64
+slang-2.3.2-11.el9.x86_64
+snappy-1.1.8-8.el9.x86_64
+sos-4.11.0-1.el9.noarch
+sqlite-libs-3.34.1-9.el9.x86_64
+squashfs-tools-4.4-10.git1.el9.x86_64
+sscg-4.0.3-2.el9.x86_64
+sssd-client-2.9.8-2.el9.x86_64
+sssd-common-2.9.8-2.el9.x86_64
+sssd-kcm-2.9.8-2.el9.x86_64
+sssd-nfs-idmap-2.9.8-2.el9.x86_64
+sudo-1.9.17p2-4.el9.x86_64
+systemd-252-69.el9.x86_64
+systemd-libs-252-69.el9.x86_64
+systemd-pam-252-69.el9.x86_64
+systemd-rpm-macros-252-69.el9.noarch
+systemd-udev-252-69.el9.x86_64
+tar-1.34-11.el9.x86_64
+tcpdump-4.99.0-9.el9.x86_64
+teamd-1.31-16.el9.x86_64
+tpm2-tss-3.2.3-1.el9.x86_64
+tzdata-2026a-1.el9.noarch
+unbound-libs-1.24.2-2.el9.x86_64
+userspace-rcu-0.12.1-6.el9.x86_64
+util-linux-2.37.4-25.el9.x86_64
+util-linux-core-2.37.4-25.el9.x86_64
+vim-minimal-8.2.2637-28.el9.x86_64
+which-2.21-30.el9.x86_64
+xfsprogs-6.4.0-7.el9.x86_64
+xz-5.2.5-8.el9.x86_64
+xz-libs-5.2.5-8.el9.x86_64
+yum-4.14.0-35.el9.noarch
+yum-utils-4.3.0-26.el9.noarch
+zlib-1.2.11-41.el9.x86_64
+
+* Mon May 04 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-701.el9]
+- crypto: algif_aead - snapshot IV for async AEAD requests (Herbert Xu) [RHEL-172207]
+- crypto: algif_aead - Fix minimum RX size check for decryption (Herbert Xu) [RHEL-172207]
+- crypto: authencesn - reject short ahash digests during instance creation (Herbert Xu) [RHEL-172207]
+- crypto: authencesn - Fix src offset when decrypting in-place (Herbert Xu) [RHEL-172207]
+- crypto: authencesn - Do not place hiseq at end of dst for out-of-place decryption (Herbert Xu) [RHEL-172207] {CVE-2026-31431}
+- crypto: authencesn - reject too-short AAD (assoclen<8) to match ESP/ESN spec (Herbert Xu) [RHEL-172207] {CVE-2026-23060}
+- crypto: af_alg - Fix page reassignment overflow in af_alg_pull_tsgl (Herbert Xu) [RHEL-172207]
+- crypto: af_alg - limit RX SG extraction by receive buffer budget (Herbert Xu) [RHEL-172207] {CVE-2026-31677}
+- crypto: algif_aead - Revert to operating out-of-place (Herbert Xu) [RHEL-172207] {CVE-2026-31431}
+- crypto: af-alg - fix NULL pointer dereference in scatterwalk (Herbert Xu) [RHEL-172207]
+- usbip: validate number_of_packets in usbip_pack_ret_submit() (CKI Backport Bot) [RHEL-171433] {CVE-2026-31607}
+- Bluetooth: SCO: Fix use-after-free in sco_recv_frame() due to missing sock_hold (CKI Backport Bot) [RHEL-171326] {CVE-2026-31408}
+- redhat/configs: enable CONFIG_SCLP_OFB for s390x (Jan Polensky) [RHEL-169810]
+- scsi: storvsc: Handle PERSISTENT_RESERVE_IN truncation for Hyper-V vFC (Vitaly Kuznetsov) [RHEL-159283]
+- s390/mm: Add missing secure storage access fixups for donated memory (Mete Durlu) [RHEL-168793]
+- Revert "mm: pcp: increase pcp->free_count threshold to trigger free_high" (Luiz Capitulino) [RHEL-144961]
+- audit: merge loops in __audit_inode_child() (Ricardo Robaina) [RHEL-145408]
+- audit: Use kzalloc() instead of kmalloc()/memset() in audit_krule_to_data() (Ricardo Robaina) [RHEL-145408]
+- audit: fix comment misindentation in audit.h (Ricardo Robaina) [RHEL-145408]
+- audit: add a missing tab (Ricardo Robaina) [RHEL-145408]
+- audit: fix typo in auditfilter.c comment (Ricardo Robaina) [RHEL-145408]
+- audit: Replace deprecated strcpy() with strscpy() (Ricardo Robaina) [RHEL-145408]
+- audit: fix indentation in audit_log_exit() (Ricardo Robaina) [RHEL-145408]
+- audit: mark audit_log_vformat() with __printf() attribute (Ricardo Robaina) [RHEL-145408]
+- auditsc: replace memcpy() with strscpy() (Ricardo Robaina) [RHEL-145408]
+- audit: use fsnotify group lock helpers (Ricardo Robaina) [RHEL-145408]
+- x86/kaslr: Recognize all ZONE_DEVICE users as physaddr consumers (Ricardo Robaina) [RHEL-144439]
+- kaslr: rename physmem_end and PHYSMEM_END to direct_map_physmem_end (Ricardo Robaina) [RHEL-144439]
+- arm64: Expose the end of the linear map in PHYSMEM_END (Ricardo Robaina) [RHEL-144439]
+
+* Wed Apr 29 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-700.el9]
+- tools/power/x86/intel-speed-select: v1.25 release (David Arcari) [RHEL-128562]
+- tools/power/x86/intel-speed-select: Fix file descriptor leak in isolate_cpus() (David Arcari) [RHEL-128562]
+- tools/power/x86/intel-speed-select: Use pkg-config for libnl-3.0 detection (David Arcari) [RHEL-128562]
+- tools/power/x86/intel-speed-select: Allow non root users (David Arcari) [RHEL-128562]
+- tools/power/x86/intel-speed-select: v1.24 release (David Arcari) [RHEL-128562]
+- tools/power/x86/intel-speed-select: Reset isst_turbo_freq_info for invalid buckets (David Arcari) [RHEL-128562]
+- tools/power/x86/intel-speed-select: Check feature status (David Arcari) [RHEL-128562]
+- platform/x86: ISST: Increase minor version (David Arcari) [RHEL-128562]
+- platform/x86: ISST: Reset core count to 0 (David Arcari) [RHEL-128562]
+- platform/x86: ISST: Correct locked bit width (David Arcari) [RHEL-128562]
+- platform/x86: ISST: Check HWP support before MSR access (David Arcari) [RHEL-128562]
+- platform/x86: ISST: Optimize suspend/resume callbacks (David Arcari) [RHEL-128562]
+- platform/x86: ISST: Check for admin capability for write commands (David Arcari) [RHEL-128562]
+- platform/x86: ISST: Store and restore all domains data (David Arcari) [RHEL-128562]
+- platform/x86: ISST: Add missing write block check (David Arcari) [RHEL-128562]
+
+* Tue Apr 28 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-699.el9]
+- redhat/configs: Enable MPAM options (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Make resctrl_mon_ctx_waiters static (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Fix the check for no monitor components found (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Fix MBA CDP alloc_capable handling on unmount (Gavin Shan) [RHEL-164227]
+- arm64: mpam: Add initial MPAM documentation (Gavin Shan) [RHEL-164227]
+- arm_mpam: Quirk CMN-650's CSU NRDY behaviour (Gavin Shan) [RHEL-164227]
+- arm_mpam: Add workaround for T241-MPAM-6 (Gavin Shan) [RHEL-164227]
+- arm_mpam: Add workaround for T241-MPAM-4 (Gavin Shan) [RHEL-164227]
+- arm_mpam: Add workaround for T241-MPAM-1 (Gavin Shan) [RHEL-164227]
+- arm_mpam: Add quirk framework (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Call resctrl_init() on platforms that can support resctrl (Gavin Shan) [RHEL-164227]
+- arm64: mpam: Select ARCH_HAS_CPU_RESCTRL (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add empty definitions for assorted resctrl functions (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Update the rmid reallocation limit (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add resctrl_arch_rmid_read() (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Allow resctrl to allocate monitors (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add support for csu counters (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add monitor initialisation and domain boilerplate (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add kunit test for control format conversions (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add support for 'MB' resource (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Wait for cacheinfo to be ready (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add rmid index helpers (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Convert to/from MPAMs fixed-point formats (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Hide CDP emulation behind CONFIG_EXPERT (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add CDP emulation (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add plumbing against arm64 task and cpu hooks (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Implement helpers to update configuration (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add resctrl_arch_get_config() (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Implement resctrl_arch_reset_all_ctrls() (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Pick the caches we will use as resctrl resources (Gavin Shan) [RHEL-164227]
+- arm_mpam: resctrl: Add boilerplate cpuhp and domain allocation (Gavin Shan) [RHEL-164227]
+- KVM: arm64: Force guest EL1 to use user-space's partid configuration (Gavin Shan) [RHEL-164227]
+- arm64: mpam: Add helpers to change a task or cpu's MPAM PARTID/PMG values (Gavin Shan) [RHEL-164227]
+- arm64: mpam: Initialise and context switch the MPAMSM_EL1 register (Gavin Shan) [RHEL-164227]
+- arm64: mpam: Add cpu_pm notifier to restore MPAM sysregs (Gavin Shan) [RHEL-164227]
+- arm64: mpam: Advertise the CPUs MPAM limits to the driver (Gavin Shan) [RHEL-164227]
+- arm64: mpam: Drop the CONFIG_EXPERT restriction (Gavin Shan) [RHEL-164227]
+- arm64: mpam: Re-initialise MPAM regs when CPU comes online (Gavin Shan) [RHEL-164227]
+- arm64: mpam: Context switch the MPAM registers (Gavin Shan) [RHEL-164227]
+- KVM: arm64: Make MPAMSM_EL1 accesses UNDEF (Gavin Shan) [RHEL-164227]
+- KVM: arm64: Preserve host MPAM configuration when changing traps (Gavin Shan) [RHEL-164227]
+- arm64/sysreg: Add MPAMSM_EL1 register (Gavin Shan) [RHEL-164227]
+- arm_mpam: Reset when feature configuration bit unset (Gavin Shan) [RHEL-164227]
+- arm_mpam: Ensure in_reset_state is false after applying configuration (Gavin Shan) [RHEL-164227]
+- arm_mpam: Force __iomem casts (Gavin Shan) [RHEL-100931]
+- arm_mpam: Disable preemption when making accesses to fake MSC in kunit test (Gavin Shan) [RHEL-100931]
+- arm_mpam: Fix null pointer dereference when restoring bandwidth counters (Gavin Shan) [RHEL-100931]
+- arm_mpam: Use non-atomic bitops when modifying feature bitmap (Gavin Shan) [RHEL-100931]
+- arm_mpam: Remove duplicate linux/srcu.h header (Gavin Shan) [RHEL-100931]
+- arm_mpam: Stop using uninitialized variables in __ris_msmon_read() (Gavin Shan) [RHEL-100931]
+- MAINTAINERS: new entry for MPAM Driver (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add kunit tests for props_mismatch() (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add kunit test for bitmap reset (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add helper to reset saved mbwu state (Gavin Shan) [RHEL-100931]
+- arm_mpam: Use long MBWU counters if supported (Gavin Shan) [RHEL-100931]
+- arm_mpam: Probe for long/lwd mbwu counters (Gavin Shan) [RHEL-100931]
+- arm_mpam: Consider overflow in bandwidth counter state (Gavin Shan) [RHEL-100931]
+- arm_mpam: Track bandwidth counter state for power management (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add mpam_msmon_read() to read monitor value (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add helpers to allocate monitors (Gavin Shan) [RHEL-100931]
+- arm_mpam: Probe and reset the rest of the features (Gavin Shan) [RHEL-100931]
+- arm_mpam: Allow configuration to be applied and restored during cpu online (Gavin Shan) [RHEL-100931]
+- arm_mpam: Use a static key to indicate when mpam is enabled (Gavin Shan) [RHEL-100931]
+- arm_mpam: Register and enable IRQs (Gavin Shan) [RHEL-100931]
+- arm_mpam: Extend reset logic to allow devices to be reset any time (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add a helper to touch an MSC from any CPU (Gavin Shan) [RHEL-100931]
+- arm_mpam: Reset MSC controls from cpuhp callbacks (Gavin Shan) [RHEL-100931]
+- arm_mpam: Merge supported features during mpam_enable() into mpam_class (Gavin Shan) [RHEL-100931]
+- arm_mpam: Probe the hardware features resctrl supports (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add helpers for managing the locking around the mon_sel registers (Gavin Shan) [RHEL-100931]
+- arm_mpam: Probe hardware to find the supported partid/pmg values (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add cpuhp callbacks to probe MSC hardware (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add MPAM MSC register layout definitions (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add the class and component structures for firmware described ris (Gavin Shan) [RHEL-100931]
+- arm_mpam: Add probe/remove for mpam msc driver and kbuild boiler plate (Gavin Shan) [RHEL-100931]
+- ACPI / MPAM: Parse the MPAM table (Gavin Shan) [RHEL-100931]
+- ACPI: Define acpi_put_table cleanup handler and acpi_get_table_pointer() helper (Gavin Shan) [RHEL-100931]
+- platform: Define platform_device_put cleanup handler (Gavin Shan) [RHEL-100931]
+- arm64: kconfig: Add Kconfig entry for MPAM (Gavin Shan) [RHEL-100931]
+- ACPI / PPTT: Add a helper to fill a cpumask from a cache_id (Gavin Shan) [RHEL-100931]
+- ACPI / PPTT: Find cache level by cache-id (Gavin Shan) [RHEL-100931]
+- ACPI / PPTT: Add acpi_pptt_cache_v1_full to use pptt cache as one structure (Gavin Shan) [RHEL-100931]
+- ACPI / PPTT: Stop acpi_count_levels() expecting callers to clear levels (Gavin Shan) [RHEL-100931]
+- ACPI / PPTT: Add a helper to fill a cpumask from a processor container (Gavin Shan) [RHEL-100931]
+- cpumask: Add initialiser to use cleanup helpers (Gavin Shan) [RHEL-100931]
+- ACPICA: MPAM: Correct the typo in struct acpi_mpam_msc_node member (Gavin Shan) [RHEL-100931]
+- ACPICA: Add support for Arm's MPAM ACPI table version 2 (Gavin Shan) [RHEL-100931]
+- platform/x86/amd/pmf: Added a module parameter to disable the Smart PC function (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Introduce new interface to export NPU metrics (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Prevent TEE errors after hibernate (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Use ring buffer to store custom BIOS input values (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Use devm_mutex_init() for mutex initialization (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Add BIOS_INPUTS_MAX macro to replace hardcoded array size (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Refactor repetitive BIOS output handling (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Replace magic table id with METRICS_TABLE_ID (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Use explicit SET_CMD/GET_CMD flags in amd_pmf_send_cmd() (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Rename IPU metrics fields to NPU for consistency (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Support new ACPI ID AMDI0108 (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Add debug logs for pending requests and custom BIOS inputs (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Call enact function sooner to process early pending requests (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Preserve custom BIOS inputs for evaluating the policies (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Add custom BIOS input support for AMD_CPU_ID_PS (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Add helper to verify BIOS input notifications are enable/disable (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Update ta_pmf_action structure member (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Extend custom BIOS inputs for more policies (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Fix the custom bios input handling mechanism (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Add support for adjusting PMF PPT and PPT APU thresholds (David Arcari) [RHEL-128575]
+- platform/x86/amd/pmf: Remove redundant ternary operators (David Arcari) [RHEL-128575]
+- dpll: zl3073x: Remove redundant cleanup in devm_dpll_init() (CKI Backport Bot) [RHEL-164439]
+- dpll: zl3073x: fix REF_PHASE_OFFSET_COMP register width for some chip IDs (CKI Backport Bot) [RHEL-164439]
+- dpll: zl3073x: Fix ref frequency setting (CKI Backport Bot) [RHEL-164439]
+- dpll: zl3073x: Include current frequency in supported frequencies list (CKI Backport Bot) [RHEL-164439]
+- dpll: zl3073x: Add output pin frequency helper (CKI Backport Bot) [RHEL-164439]
+- ipv4: ip_gre: make ipgre_header() robust (Guillaume Nault) [RHEL-152693]
+- ip6_tunnel: use skb_vlan_inet_prepare() in __ip6_tnl_rcv() (Guillaume Nault) [RHEL-152693]
+- erspan: Initialize options_len before referencing options. (Guillaume Nault) [RHEL-152693]
+- arp: do not assume dev_hard_header() does not change skb->head (Guillaume Nault) [RHEL-152693]
+- ip6_gre: make ip6gre_header() robust (Guillaume Nault) [RHEL-152693]
+- net/ip6_tunnel: Prevent perpetual tunnel growth (Guillaume Nault) [RHEL-152693]
+- vxlan: Handle error of rtnl_register_module(). (Guillaume Nault) [RHEL-152693]
+- sched/deadline: Fix missing ENQUEUE_REPLENISH during PI de-boosting (Herton R. Krzesinski) [RHEL-157267]
+- iommu/amd: Fix potential out-of-bounds read in iommu_mmio_show (Jerry Snitselaar) [RHEL-140473]
+- redhat/configs: Enable AMD IOMMU DebugFS support (Jerry Snitselaar) [RHEL-140473]
+
+* Mon Apr 27 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-698.el9]
+- thermal: intel: intel_soc_dts_thermal: Switch to new Intel CPU model defines (David Arcari) [RHEL-128567]
+- thermal: intel: x86_pkg_temp_thermal: Fix bogus trip temperature (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: soc_slider: Set offset only for balanced mode (David Arcari) [RHEL-128567]
+- thermal: int340x: Fix sysfs group leak on DLVR registration failure (David Arcari) [RHEL-128567]
+- drivers: thermal: intel: tcc_cooling: Drop redundant local variable (David Arcari) [RHEL-128567]
+- thermal: intel: x86_pkg_temp_thermal: Handle invalid temperature (David Arcari) [RHEL-128567]
+- thermal: intel: Use sysfs_emit() in a sysfs show function (David Arcari) [RHEL-128567]
+- thermal: intel: fix typo "nagative" in comment for cpu argument (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Use sysfs_emit{_at}() in sysfs show functions (David Arcari) [RHEL-128567]
+- thermal: int340x: processor_thermal: Enable slow workload type hints (David Arcari) [RHEL-128567]
+- thermal: intel: intel_pch_thermal: Drop explicit driver data clearing (David Arcari) [RHEL-128567]
+- thermal: intel: intel_tcc_cooling: Add CPU models in the support list (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Enable power slider interface for Wildcat Lake (David Arcari) [RHEL-128567]
+- powercap: intel_rapl: Prepare read_raw() interface for atomic-context callers (David Arcari) [RHEL-128567]
+- ACPI: DPTF: Support Nova Lake (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Add DLVR support for Nova Lake (David Arcari) [RHEL-128567]
+- thermal: int340x: processor_thermal: Add Nova Lake processor thermal device (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Replace sprintf() with sysfs_emit() (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Use symbolic constant for UUID comparison (David Arcari) [RHEL-128567]
+- thermal: intel: Select INT340X_THERMAL from INTEL_SOC_DTS_THERMAL (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Power Slider: Validate slider_balance range (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Add module parameter to change slider offset (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Add module parameter for balanced Slider (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Enable power slider interface for Panther Lake (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Add support for power slider (David Arcari) [RHEL-128567]
+- thermal: intel: int340x: Remove redundant acpi_has_method() call (David Arcari) [RHEL-128567]
+- x86/msr: Rename 'wrmsrl_safe()' to 'wrmsrq_safe()' [partial] (David Arcari) [RHEL-128567]
+- x86/msr: Rename 'rdmsrl_safe()' to 'rdmsrq_safe()' [partial] (David Arcari) [RHEL-128567]
+- x86/msr: Rename 'wrmsrl()' to 'wrmsrq()' [partial] (David Arcari) [RHEL-128567]
+- x86/msr: Rename 'rdmsrl()' to 'rdmsrq()' [partial] (David Arcari) [RHEL-128567]
+- x86/msr: Rename 'wrmsrl_on_cpu()' to 'wrmsrq_on_cpu()' [partial] (David Arcari) [RHEL-128563]
+- x86/msr: Rename 'rdmsrl_on_cpu()' to 'rdmsrq_on_cpu()' [partial] (David Arcari) [RHEL-128563]
+- x86/msr: Rename 'wrmsrl_safe_on_cpu()' to 'wrmsrq_safe_on_cpu()' [partial] (David Arcari) [RHEL-128563]
+- x86/msr: Rename 'rdmsrl_safe_on_cpu()' to 'rdmsrq_safe_on_cpu()' [partial] (David Arcari) [RHEL-128563]
+- x86/msr: Rename 'rdmsrl_safe()' to 'rdmsrq_safe()' [partial] (David Arcari) [RHEL-128563]
+- x86/msr: Rename 'wrmsrl()' to 'wrmsrq()' [partial] (David Arcari) [RHEL-128563]
+- x86/msr: Rename 'rdmsrl()' to 'rdmsrq()' [partial] (David Arcari) [RHEL-128563]
+- cpufreq/amd-pstate: Add comment explaining nominal_perf usage for performance policy (David Arcari) [RHEL-128563]
+- cpufreq/amd-pstate: Call cppc_set_auto_sel() only for online CPUs (David Arcari) [RHEL-128563]
+- cpufreq/amd-pstate: Add static asserts for EPP indices (David Arcari) [RHEL-128563]
+- cpufreq/amd-pstate: Fix some whitespace issues (David Arcari) [RHEL-128563]
+- cpufreq/amd-pstate: Adjust return values in amd_pstate_update_status() (David Arcari) [RHEL-128563]
+- cpufreq/amd-pstate: Make amd_pstate_get_mode_string() never return NULL (David Arcari) [RHEL-128563]
+- cpufreq/amd-pstate: Drop NULL value from amd_pstate_mode_string (David Arcari) [RHEL-128563]
+- cpufreq/amd-pstate: Use sysfs_match_string() for epp (David Arcari) [RHEL-128563]
+- crypto: asymmetric_keys - prevent overflow in asymmetric_key_generate_id (CKI Backport Bot) [RHEL-169569] {CVE-2025-68724}
+- Documentation/powerpc: update fadump implementation details (Mamatha Inamdar) [RHEL-138954]
+- powerpc/fadump: add hotplug_ready sysfs interface (Mamatha Inamdar) [RHEL-138954]
+- powerpc: make fadump resilient with memory add/remove events (Mamatha Inamdar) [RHEL-138954]
+- sfc: add transmit timestamping support (Izabela Bakollari) [RHEL-74331]
+- wifi: ath10k: fix station lookup failure during disconnect (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cw1200: add WQ_PERCPU to alloc_workqueue users (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: correct use sequence of driver_data in skb->info (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mvm: pause TCM on fast resume (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: cancel mlo_scan_start_wk (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: correctly decode TTLM with default link map (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: ignore link disabled flag from userspace (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: apply advertised TTLM from association response (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: parse all TTLM entries (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: don't increment crypto_tx_tailroom_needed_cnt twice (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: don't perform DA check on S1G beacon (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Fix wrong P2P device link id issue (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: fix dead lock while flushing management frames (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Fix scan state stuck in ABORTING after cancel_remain_on_channel (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: cancel scan only on active scan vdev (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mwifiex: Fix a loop in mwifiex_update_ampdu_rxwinsize() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: correctly check if CSA is active (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: Fix bitrate calculation overflow for HE rates (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: don't force radio frequency check in freq_to_idx() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: fix dma_free_coherent() pointer (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath10k: fix dma_free_coherent() pointer (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: collect station statistics earlier when disconnect (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: restore non-chanctx injection behaviour (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211_hwsim: disable BHs for hwsim_radio_lock (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: don't iterate not running interfaces (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: avoid kernel-infoleak from struct iw_point (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: Remove blank line after mt792x firmware version dmesg (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- Revert "wifi: mt76: Strip whitespace from build ddate" (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: Implement settime64 as stub for MVM/MLD PTP (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: ocb: skip rx_no_sta when interface is not joined (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: do not use old MBSSID elements (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: don't WARN for connections on invalid channels (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: sme: store capped length in __cfg80211_connect_result() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: fix list iteration in ieee80211_add_virtual_monitor() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: Discard Beacon frames to non-broadcast address (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- Revert "wifi: rtw88: add WQ_UNBOUND to alloc_workqueue users" (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtlwifi: 8192cu: fix tid out of range in rtl92cu_tx_fill_desc() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: allow sharing identical chanctx for S1G interfaces (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: include s1g_primary_2mhz when comparing chandefs (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: include s1g_primary_2mhz when sending chandef (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ieee80211: correct FILS status codes (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- mt76: mt7615: Fix memory leak in mt7615_mcu_wtbl_sta_add() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt792x: fix wifi init fail by setting MCU_RUNNING after CLC load (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: Strip whitespace from build ddate (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: Add missing locking in mt7996_mac_sta_rc_work() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: skip ieee80211_iter_keys() on scanning link remove (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: skip deflink accounting for offchannel links (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: move mt7996_update_beacons under mt76 mutex (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: grab mt76 mutex in mt7996_mac_sta_event() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7925: ensure the 6GHz A-MPDU density cap from the hardware. (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: fix using wrong phy to start in mt7996_mac_restart() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: fix MLO set key and group key issues (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: fix MLD group index assignment (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: use correct link_id when filling TXD and TXP (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: set link_valid field when initializing wcid (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: fix teardown command for an MLD peer (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: fix several fields in mt7996_mcu_bss_basic_tlv() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: support fixed rate for link station (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: fix implicit beamforming support for mt7992 (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: no need to wait ACK event for SDO command (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: fix max nss value when getting rx chainmask (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7925: cqm rssi low/high event notify (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: adjust BSS conf pointer handling (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- Revert "wifi: mt76: mt792x: improve monitor interface handling" (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mmio_*_copy fix byte order and alignment (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: Use of_reserved_mem_region_to_resource() for "memory-region" (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: fix typos in comments (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: Add the capability to set TX token start ID (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: Add mt76_dev pointer in mt76_queue struct. (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: Move Q_READ/Q_WRITE definitions in dma.h (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: Remove useless check in mt7996_msdu_page_get_from_cache() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: relicense to BSD-3-Clause-Clear (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: fix license/copyright of util.h (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: use GFP_DMA32 for page_pool buffer allocation (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7915: add bf backoff limit table support (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: Fix DTS power-limits on little endian systems (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: connac: Replace memcpy + hard-coded size with strscpy (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: Remove unnecessary link_id checks in mt7996_tx (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mt76: mt7996: fix null pointer deref in mt7996_conf_tx() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: brcmfmac: Add DMI nvram filename quirk for Acer A1 840 tablet (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: stop radar detection in cfg80211_leave() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: use cfg80211_leave() in iftype change (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: fix channel switching code (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtl8xxxu: Enable 40 MHz width by default (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtl8xxxu: Fix RX channel width reported by RTL8192FU (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtl8xxxu: Fix the 40 MHz subchannel for RTL8192EU, RTL8723BU (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtl8xxxu: Make RTL8192CU, RTL8723AU TX with 40 MHz width (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtl8xxxu: Fix HT40 channel config for RTL8192CU, RTL8723AU (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: 8852a: correct field mask of reset DAC/ADC FIFO (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw88: add WQ_UNBOUND to alloc_workqueue users (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtlwifi: add WQ_UNBOUND to alloc_workqueue users (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: refactor CMAC packet handlers (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: refactor CMAC crypt functions (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: utilize the newly defined CMAC constants (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: add generic MMIE struct defines (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: fix CMAC functions not handling errors (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: Add support for 6GHz AP role not relevant AP type (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Add default ID 0bda:b831 for RTL8831BU (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: use separated function to set RX filter (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: correct user macid mask of RX info for RTL8922D (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: update format of addr cam H2C command (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: add addr cam H2C command v1 (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: fill addr cam H2C command by struct (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: align RA H2C format v1 for RTL8922A (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: fw: print band and port where beacon update on (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: phy: ignore DCFO if not defined in chip_info (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: phy: consider type 15 in BB gain table (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: mac: update wcpu_on to download firmware for RTL8922D (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: mac: remove undefined bit B_BE_PPDU_MAC_INFO (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: phy: calling BB pre-init by chips with/without BB MCU (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: mac: separate pre-init code before downloading firmware (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: fw: part size to download firmware by header info (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: flush TX queue before deleting key (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: rtw8852bu: Added dev id for ASUS AX57 NANO USB Wifi dongle (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: configure RX antenna if chips can support (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: do RF calibration once setting channel when running pure monitor mode (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: consider data rate/bandwidth/GI for injected packets (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: phy: fix out-of-bounds access in rtw89_phy_read_txpwr_limit() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: 8852c: add compensation of thermal value from efuse calibration (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: debug: add parser to diagnose along DIAG_MAC fw element (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: fw: parse firmware element of DIAG_MAC (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: pci: add to read PCI configuration space from common code (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: make monitor link info check more specific (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: track MU-MIMO configuration on disabled interfaces (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211/mac80211: Add fallback mechanism for INDOOR_SP connection (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211/mac80211: clean up duplicate ap_power handling (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: use a C99 initializer in wiphy_register (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtlwifi: rtl8188ee: correct allstasleep in P2P PS H2C command (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Enable the new rtw89_8852au module (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Add rtw8852au.c (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: 8852a: Accept USB devices and load their MAC address (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Add rtw8852a_hfc_param_ini_usb (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Add rtw8852a_dle_mem_usb (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Use the correct power sequences for USB/SDIO (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: fix doc of struct key_params (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: remove unnecessary vlan NULL check (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: pass frame type to element parsing (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: remove "disabling VHT" message (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: add and use chanctx usage iteration (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: simplify ieee80211_recalc_chanctx_min_def() API (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: remove chanctx to link back-references (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: make link iteration safe for 'break' (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: fix EHT typo (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: fix EHT typo (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ieee80211: split NAN definitions out (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ieee80211: split P2P definitions out (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ieee80211: split S1G definitions out (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ieee80211: split EHT definitions out (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ieee80211: split HE definitions out (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ieee80211: split VHT definitions out (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ieee80211: split HT definitions out (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ieee80211: split mesh definitions out (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Fix timeout error during beacon stats retrieval (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Make firmware stats reset caller-driven (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: process TX wait skbs for USB via C2H handler (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: provide TX reports for management frames (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: handle IEEE80211_TX_CTL_REQ_TX_STATUS frames for USB (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: usb: anchor TX URBs (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: fill TX descriptor of FWCMD in shortcut (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: implement C2H TX report handler (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: refine rtw89_core_tx_wait_complete() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: usb: use ieee80211_free_txskb() where appropriate (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: usb: fix leak in rtw89_usb_write_port() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: usb: use common error path for skbs in rtw89_usb_rx_handler() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw88: Add BUFFALO WI-U3-866DHP to the USB ID list (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw88: 8822c: use fixed rate and bandwidth to reply CSI packets (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Enable the new rtw89_8852cu module (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Add rtw8852cu.c (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: 8852c: Accept USB devices and load their MAC address (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Add rtw8852c_hfc_param_ini_usb (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Add rtw8852c_dle_mem_usb{2,3} (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: 8852c: Fix rtw8852c_pwr_{on,off}_func() for USB (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Fix rtw89_mac_dmac_func_pre_en_ax() for USB/SDIO (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: usb: Prepare rtw89_usb_ops_mac_post_init() for RTL8852CU (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: usb: Prepare rtw89_usb_ops_mac_pre_init() for RTL8852CU (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: usb: Move bulk out map to new struct rtw89_usb_info (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Add rtw89_core_get_ch_dma_v2() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: 8832cu: turn off TX partial mode (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath10k: use = {} to initialize bmi_target_info instead of memset (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath10k: use = {} to initialize pm_qos_request instead of memset (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: unassign arvif on scan vdev create failure (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: enforce vdev limit in ath12k_mac_vdev_create() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Set EHT fixed rates for associated STAs (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: add EHT rates to ath12k_mac_op_set_bitrate_mask() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Add EHT fixed GI/LTF (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Add EHT MCS/NSS rates to Peer Assoc (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: add EHT rate handling to existing set rate functions (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: generalize GI and LTF fixed rate functions (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: fix error handling in creating hardware group (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: fix reusing m3 memory (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: fix potential memory leak in ath12k_wow_arp_ns_offload() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: Allow HT Action frame processing on 6 GHz when HE is supported (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rt2x00: add nvmem eeprom support (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: add RX flag to report radiotap VHT information (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: add null check for kzalloc() in iwl_mld_send_proto_offload() (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: check for NULL pointer after kmalloc (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: cfg: fix a few device names (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: Move EMLSR prints to IWL_DL_EHT (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: disable EHT if the device doesn't allow it (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: bump core version for BZ/SC/DR (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: use FW_CHECK on bad ROC notification (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mvm/mld: report non-HT frames as 20 MHz (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: bump core version for BZ/SC/DR (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: fix build when mvm/mld not configured (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: check the validity of noa_len (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: stop checking the firmware's error pointer (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: be more chatty when we fail to find a wifi7 device (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: fw: remove support of several iwl_lari_config_change_cmd versions (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: include raw PHY notification in radiotap (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: update to new sniffer API (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: set wiphy::iftype_ext_capab dynamically (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: support get/set_antenna (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mvm: cleanup unsupported phy command versions (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: fix remaining kernel-doc warnings (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: tests: check listed PCI IDs have configs (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: cfg: add new device names (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: iwlmld is always used for wifi7 devices (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mvm: move rate conversions to utils.c (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: reschedule check_tpt_wk also not in EMLSR (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: mld: remove support from of alive notif version 6 (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: iwlwifi: align the name of iwl_alive_ntf_v6 to the convention (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: improve scan time on 6 GHz band (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: restart hardware to recover firmware if power-save becomes abnormal (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: 8852c: fix ADC oscillation in 160MHz affecting RX performance (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: regd: apply ACPI policy even if country code is programmed (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: support EHT rate pattern via bitrate mask (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: mlo: handle needed H2C when link switching is requested by stack (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: use skb_dequeue() for queued ROC packets to prevent racing (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: splice C2H events queue to local to prevent racing (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: Add parameters to radio-specific debugfs directories (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: Add debugfs support for multi-radio wiphy (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: fix missing RX bitrate update for mesh forwarding path (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211: default S1G chandef width to 1MHz (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: get probe response chan via ieee80211_get_channel_khz (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211: reset CRC valid after CSA (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: mac80211_hwsim: advertise puncturing feature support (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: cfg80211/mac80211: validate radio frequency range for monitor mode (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rt2x00: check retval for of_get_mac_address (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Assert base_lock is held before allocating REO update element (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: restore register window after global reset (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: add support for BSS color change (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath11k: Correctly use "ab" macro parameter (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath11k: advertise NL80211_FEATURE_TX_POWER_INSERTION (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath11k: add support for Tx Power insertion in RRM action frame (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath11k: wrap ath11k_mac_op_get_txpower() with lock-aware internal helper (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath11k: relocate some Tx power related functions in mac.c (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath11k: fix peer HE MCS assignment (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath11k: fix VHT MCS assignment (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath10k: Support for FTM TLV test commands (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtl8xxxu: Use correct power off sequence for RTL8192CU (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtl8xxxu: Dump the efuse right after reading it (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtl8xxxu: Report the signal strength only if it's known (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw89: Replace hardcoded strings with helper functions (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtw88: Add USB ID 2001:3329 for D-Link AC13U rev. A1 (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: rtl8xxxu: Add USB ID 2001:3328 for D-Link AN3U rev. A1 (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Add MODULE_FIRMWARE() entries (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: fix TX and RX MCS rate configurations in HE mode (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: fix VHT MCS assignment (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Fix NSS value update in ext_rx_stats (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Defer vdev bring-up until CSA finalize to avoid stale beacon (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: track dropped MSDU buffer type packets in REO exception ring (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Fix MSDU buffer types handling in RX error path (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath11k: restore register window after global reset (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath12k: Remove struct wmi_bcn_send_from_host_cmd (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath11k: Remove struct wmi_bcn_send_from_host_cmd (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- wifi: ath10k: move recovery check logic into a new work (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- config: wifi: disable new unsupported configuration options (Jose Ignacio Tornos Martinez) [RHEL-163622]
+- bus: mhi: host: pci_generic: Add Foxconn T99W760 modem (Jose Ignacio Tornos Martinez) [RHEL-163621]
+- bus: mhi: ep: add WQ_PERCPU to alloc_workqueue users (Jose Ignacio Tornos Martinez) [RHEL-163621]
+- bus: mhi: host: pci_generic: Add Telit FE990B40 modem support (Jose Ignacio Tornos Martinez) [RHEL-163621]
+- bus: mhi: ep: Make mhi_ep_bus_type const (Jose Ignacio Tornos Martinez) [RHEL-163621]
+
+* Wed Apr 22 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-697.el9]
+- x86/resctrl: Fix memory bandwidth counter width for Hygon (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Add missing resctrl initialization for Hygon (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Update documentation for telemetry events (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Enable RDT_RESOURCE_PERF_PKG (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Move RMID initialization to first mount (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Compute number of RMIDs as minimum across resources (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Move allocation/free of closid_num_dirty_rmid[] (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Handle number of RMIDs supported by RDT_RESOURCE_PERF_PKG (Gavin Shan) [RHEL-163713]
+- selftests/resctrl: Fix non-contiguous CBM check for Hygon (Gavin Shan) [RHEL-163713]
+- selftests/resctrl: Add CPU vendor detection for Hygon (Gavin Shan) [RHEL-163713]
+- selftests/resctrl: Define CPU vendor IDs as bits to match usage (Gavin Shan) [RHEL-163713]
+- selftests/resctrl: Fix a division by zero error on Hygon (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Add energy/perf choices to rdt boot option (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Handle domain creation/deletion for RDT_RESOURCE_PERF_PKG (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Refactor rmdir_mondata_subdir_allrdtgrp() (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Refactor mkdir_mondata_subdir() (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Read telemetry events (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Find and enable usable telemetry events (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Add architectural event pointer (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Fill in details of events for performance and energy GUIDs (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Discover hardware telemetry events (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Emphasize that L3 monitoring resource is required for summing domains (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Add and initialize a resource for package scope monitoring (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Add an architectural hook called for first mount (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Support binary fixed point event counters (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Handle events that can be read from any CPU (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Make event details accessible to functions when reading events (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Rename some L3 specific functions (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Rename struct rdt_mon_domain and rdt_hw_mon_domain (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Use struct rdt_domain_hdr when reading counters (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Split L3 dependent parts out of __mon_event_count() (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Refactor domain create/remove using struct rdt_domain_hdr (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Clean up domain_remove_cpu_ctrl() (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Refactor domain_remove_cpu_mon() ready for new domain types (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Move L3 initialization into new helper function (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Improve domain type checking (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Update bit_usage to reflect io_alloc (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce interface to modify io_alloc capacity bitmasks (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Modify struct rdt_parse_data to pass mode and CLOSID (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce interface to display io_alloc CBMs (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Add user interface to enable/disable io_alloc feature (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce interface to display "io_alloc" support (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Implement "io_alloc" enable/disable handlers (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Detect io_alloc feature (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Add SDCIAE feature in the command line options (Gavin Shan) [RHEL-163713]
+- x86/cpufeatures: Add support for L3 Smart Data Cache Injection Allocation Enforcement (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Consider sparse masks when initializing new group's allocation (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Fix NULL pointer dereference with events force-disabled in mbm_event mode (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Support Sub-NUMA Cluster (SNC) mode on Clearwater Forest (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Fix counter auto-assignment on mkdir with mbm_event enabled (Gavin Shan) [RHEL-163713]
+- MAINTAINERS: resctrl: Add myself as reviewer (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Configure mbm_event mode if supported (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce the interface to switch between monitor modes (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Disable BMEC event configuration when mbm_event mode is enabled (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce the interface to modify assignments in a group (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce mbm_L3_assignments to list assignments in a group (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Auto assign counters on mkdir and clean up on group removal (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce mbm_assign_on_mkdir to enable assignments on mkdir (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Provide interface to update the event configurations (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Add event configuration directory under info/L3_MON/ (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Support counter read/reset with mbm_event assignment mode (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Pass struct rdtgroup instead of individual members (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Add the functionality to unassign MBM events (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Add the functionality to assign MBM events (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Implement resctrl_arch_config_cntr() to assign a counter with ABMC (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce event configuration field in struct mon_evt (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Add data structures and definitions for ABMC assignment (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce interface to display number of free MBM counters (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce mbm_cntr_cfg to track assignable counters per domain (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Add resctrl file to display number of assignable counters (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Introduce the interface to display monitoring modes (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Add support to enable/disable AMD ABMC feature (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Detect Assignable Bandwidth Monitoring feature details (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Consolidate monitoring related data from rdt_resource (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Add ABMC feature in the command line options (Gavin Shan) [RHEL-163713]
+- x86/cpufeatures: Add support for Assignable Bandwidth Monitoring Counters (ABMC) (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Prepare for more monitor events (Gavin Shan) [RHEL-163713]
+- x86/resctrl: Remove the rdt_mon_features global variable (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Replace architecture event enabled checks (Gavin Shan) [RHEL-163713]
+- x86,fs/resctrl: Consolidate monitor event descriptions (Gavin Shan) [RHEL-163713]
+- fs/resctrl: Optimize code in rdt_get_tree() (Gavin Shan) [RHEL-163713]
+- Documentation: Fix filesystems typos (Gavin Shan) [RHEL-163713]
+- Prevent stripping of rtla and rv binaries during install (John Kacur) [RHEL-85867 RHEL-96913]
+- Fix rtla and rv debuginfo package definitions (John Kacur) [RHEL-85867 RHEL-96913]
+- Add debuginfo package for rtla tool (John Kacur) [RHEL-85867 RHEL-96913]
+- Add debuginfo package for rv tool (John Kacur) [RHEL-85867 RHEL-96913]
+
+* Tue Apr 21 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-696.el9]
+- mm/page_alloc: add vm.thp_thisnode_reclaim sysctl to allow THP reclaim on local node (Nico Pache) [RHEL-148561]
+- mm/page_alloc: simplify __alloc_pages_slowpath() flow (Nico Pache) [RHEL-148561]
+- mm/page_alloc: refactor the initial compaction handling (Nico Pache) [RHEL-148561]
+- mm/page_alloc: ignore the exact initial compaction result (Nico Pache) [RHEL-148561]
+- mm, page_alloc, thp: prevent reclaim for __GFP_THISNODE THP allocations (Nico Pache) [RHEL-148561]
+- mm/page_alloc.c: avoid infinite retries caused by cpuset race (Nico Pache) [RHEL-148561]
+- mm: warn about illegal __GFP_NOFAIL usage in a more appropriate location and manner (Nico Pache) [RHEL-148561]
+- mm: document __GFP_NOFAIL must be blockable (Nico Pache) [RHEL-148561]
+- KVM: arm64: Discard PC update state on vcpu reset (Eric Auger) [RHEL-154746]
+- KVM: arm64: Fix vma_shift staleness on nested hwpoison path (Eric Auger) [RHEL-154746]
+- KVM: arm64: nv: Report addrsz fault at level 0 with a bad VTTBR.BADDR (Eric Auger) [RHEL-154746]
+- KVM: arm64: nv: Check S2 limits based on implemented PA size (Eric Auger) [RHEL-154746]
+- KVM: arm64: pkvm: Fallback to level-3 mapping on host stage-2 fault (Eric Auger) [RHEL-154746]
+- KVM: arm64: Eagerly init vgic dist/redist on vgic creation (Eric Auger) [RHEL-154746]
+- KVM: arm64: nv: Add trap config for DBGWCR<15>_EL1 (Eric Auger) [RHEL-154746]
+- KVM: arm64: Fix Trace Buffer trapping for protected VMs (Eric Auger) [RHEL-154746]
+- KVM: arm64: Fix EL2 S1 XN handling for hVHE setups (Eric Auger) [RHEL-154746]
+- KVM: arm64: Move pagetable definitions to common header (Eric Auger) [RHEL-154746]
+- KVM: arm64: Remove ISB after writing FPEXC32_EL2 (Eric Auger) [RHEL-154746]
+- KVM: arm64: Fix comment in fpsimd_lazy_switch_to_host() (Eric Auger) [RHEL-154746]
+- KVM: arm64: Use kvzalloc() for kvm struct allocation (Eric Auger) [RHEL-154746]
+- KVM: arm64: Drop useless __GFP_HIGHMEM from kvm struct allocation (Eric Auger) [RHEL-154746]
+- KVM: arm64: Prevent access to vCPU events before init (Eric Auger) [RHEL-154746]
+
+* Thu Apr 16 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-695.el9]
+- iommu/ipmmu-vmsa: fix device leak on of_xlate() (Jerry Snitselaar) [RHEL-147906]
+- of/device: Fix up of_dma_configure_id() stub (Jerry Snitselaar) [RHEL-147906]
+- iommu/tegra: fix device leak on probe_device() (Jerry Snitselaar) [RHEL-147906]
+- iommu/arm-smmu-qcom: Enable use of all SMR groups when running bare-metal (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Set INTEL_IOMMU_FLOPPY_WA depend on BLK_DEV_FD (Jerry Snitselaar) [RHEL-147906]
+- lib: scatterlist: fix sg_split_phys to preserve original scatterlist offsets (Jerry Snitselaar) [RHEL-147906]
+- dma-mapping: benchmark: Restore padding to ensure uABI remained consistent (Jerry Snitselaar) [RHEL-147906]
+- dma-direct: Fix missing sg_dma_len assignment in P2PDMA bus mappings (Jerry Snitselaar) [RHEL-147906]
+- dma/pool: eliminate alloc_pages warning in atomic_pool_expand (Jerry Snitselaar) [RHEL-147906]
+- dma/pool: distinguish between missing and exhausted atomic pools (Jerry Snitselaar) [RHEL-147906]
+- iommufd: Make vfio_compat's unmap succeed if the range is already empty (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Fix unused invalidation hint in qi_desc_iotlb (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Flush piotlb for SVM and Nested domain (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Flush cache for PASID table before using it (Jerry Snitselaar) [RHEL-147906]
+- iommu/io-pgtable-arm: fix size_t signedness bug in unmap path (Jerry Snitselaar) [RHEL-147906]
+- iommu/arm-smmu-v3: Fix error check in arm_smmu_alloc_cd_tables (Jerry Snitselaar) [RHEL-147906]
+- iommu/arm-smmu-v3: Remove IAS (Jerry Snitselaar) [RHEL-147906]
+- iommu/arm-smmu-v3: Do not set disable_ats unless vSTE is Translate (Jerry Snitselaar) [RHEL-147906]
+- iommu/arm-smmu-v3: Mark EATS_TRANS safe when computing the update sequence (Jerry Snitselaar) [RHEL-147906]
+- iommu/arm-smmu-v3: Mark STE MEV safe when computing the update sequence (Jerry Snitselaar) [RHEL-147906]
+- iommu/arm-smmu-v3: Add update_safe bits to fix STE update sequence (Jerry Snitselaar) [RHEL-147906]
+- iommu/amd: Use core's primary handler and set IRQF_ONESHOT (Jerry Snitselaar) [RHEL-147906]
+- iommu/amd: Fix pci_segment memleak in alloc_pci_segment() (Jerry Snitselaar) [RHEL-147906]
+- iommu/amd: Propagate the error code returned by __modify_irte_ga() in modify_irte_ga() (Jerry Snitselaar) [RHEL-147906]
+- iommu/amd: Fix error path in amd_iommu_probe_device() (Jerry Snitselaar) [RHEL-147906]
+- iommu/amd: Block identity domain when SNP enabled (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: PRS isn't usable if PDS isn't supported (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Only handle IOPF for SVA when PRI is supported (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Fix intel iommu iotlb sync hardlockup and retry (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Flush dev-IOTLB only when PCIe device is accessible in scalable mode (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Skip dev-iotlb flush for inaccessible PCIe device without scalable mode (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Fix race condition during PASID entry replacement (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Clear Present bit before tearing down context entry (Jerry Snitselaar) [RHEL-147906]
+- iommu/vt-d: Clear Present bit before tearing down PASID entry (Jerry Snitselaar) [RHEL-147906]
+- selftests: net: check jq command is supported (Guillaume Nault) [RHEL-146140]
+- selftests: rtnetlink: Fix do_test_address_proto() (Guillaume Nault) [RHEL-146140]
+- selftests: rtnetlink: Add an address proto test (Guillaume Nault) [RHEL-146140]
+- net: ipv4: Allow changing IPv4 address protocol (Guillaume Nault) [RHEL-146140]
+- net: Add new protocol attribute to IP addresses (Guillaume Nault) [RHEL-146140]
+- l2tp: do not use sock_hold() in pppol2tp_session_get_sock() (Guillaume Nault) [RHEL-152688]
+- ppp: fix race conditions in ppp_fill_forward_path (Guillaume Nault) [RHEL-152688]
+
+* Wed Apr 15 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-694.el9]
+- powerpc/tools: drop `-o pipefail` in gcc check scripts (Jan Stancek) [RHEL-165107]
+- Documentation/rtla: Document --bpf-action option (Tomas Glozar) [RHEL-153391]
+- Documentation/rtla: Rename sample/ to example/ (Tomas Glozar) [RHEL-153391]
+- rtla/tests: Run Test::Harness in verbose mode (Tomas Glozar) [RHEL-153391]
+- rtla/tests: Test BPF action program (Tomas Glozar) [RHEL-153391]
+- rtla/timerlat: Add example for BPF action program (Tomas Glozar) [RHEL-153391]
+- rtla/timerlat: Add --bpf-action option (Tomas Glozar) [RHEL-153391]
+- rtla/timerlat: Support tail call from BPF program (Tomas Glozar) [RHEL-153391]
+- tools/power turbostat: Allow execution to continue after perf_l2_init() failure (David Arcari) [RHEL-128571]
+- tools/power turbostat: Fix delimiter bug in print functions (David Arcari) [RHEL-128571]
+- tools/power turbostat: Fix --show/--hide for individual cpuidle counters (David Arcari) [RHEL-128571]
+- tools/power turbostat: Fix incorrect format variable (David Arcari) [RHEL-128571]
+- tools/power turbostat: Consistently use print_float_value() (David Arcari) [RHEL-128571]
+- tools/power/turbostat: Fix microcode patch level output for AMD/Hygon (David Arcari) [RHEL-128571]
+- tools/power turbostat: Eliminate unnecessary data structure allocation (David Arcari) [RHEL-128571]
+- tools/power turbostat: Fix swidle header vs data display (David Arcari) [RHEL-128571]
+- tools/power turbostat: Fix illegal memory access when SMT is present and disabled (David Arcari) [RHEL-128571]
+- tools/power turbostat: Fix AMD RAPL regression (David Arcari) [RHEL-128571]
+- tools/power turbostat: version 2026.02.14 (David Arcari) [RHEL-128571]
+- tools/power turbostat: Fix and document --header_iterations (David Arcari) [RHEL-128571]
+- tools/power turbostat: Use strtoul() for iteration parsing (David Arcari) [RHEL-128571]
+- tools/power turbostat: Favor cpu# over core# (David Arcari) [RHEL-128571]
+- tools/power turbostat: Expunge logical_cpu_id (David Arcari) [RHEL-128571]
+- tools/power turbostat: Enhance HT enumeration (David Arcari) [RHEL-128571]
+- tools/power turbostat: Simplify global core_id calculation (David Arcari) [RHEL-128571]
+- tools/power turbostat: Unify even/odd/average counter referencing (David Arcari) [RHEL-128571]
+- tools/power turbostat: Allocate average counters dynamically (David Arcari) [RHEL-128571]
+- tools/power turbostat: Delete core_data.core_id (David Arcari) [RHEL-128571]
+- tools/power turbostat: Rename physical_core_id to core_id (David Arcari) [RHEL-128571]
+- tools/power turbostat: Cleanup package_id (David Arcari) [RHEL-128571]
+- tools/power turbostat: Cleanup internal use of "base_cpu" (David Arcari) [RHEL-128571]
+- tools/power turbostat: Add L2 cache statistics (David Arcari) [RHEL-128571]
+- tools/power turbostat: Remove redundant newlines from err(3) strings (David Arcari) [RHEL-128571]
+- tools/power turbostat: Allow more use of is_hybrid flag (David Arcari) [RHEL-128571]
+- tools/power turbostat: Rename "LLCkRPS" column to "LLCMRPS" (David Arcari) [RHEL-128571]
+- tools/power turbostat.8: Document the "--force" option (David Arcari) [RHEL-128571]
+- tools/power turbostat: Harden against unexpected values (David Arcari) [RHEL-128571]
+- tools/power turbostat: Dump hypervisor name (David Arcari) [RHEL-128571]
+- tools/power turbostat: Dump CPUID.1.ECX[31] (Hypervisor) (David Arcari) [RHEL-128571]
+- tools/power turbostat: Dump CPUID(1) consistently with CPUID(6) (David Arcari) [RHEL-128571]
+- tools/power turbostat: AMD: msr offset 0x611 read failed: Input/output error (David Arcari) [RHEL-128571]
+- tools/power turbostat: version 2025.12.02 (David Arcari) [RHEL-128571]
+- tools/power turbostat: Print wide names only for RAW 64-bit columns (David Arcari) [RHEL-128571]
+- tools/power turbostat: Print percentages in 8-columns (David Arcari) [RHEL-128571]
+- tools/power turbostat: Print "nan" for out of range percentages (David Arcari) [RHEL-128571]
+- tools/power turbostat: Enhance perf probe (David Arcari) [RHEL-128571]
+- tools/power turbostat: Validate RAPL MSRs for AWS Nitro Hypervisor (David Arcari) [RHEL-128571]
+- tools/power turbostat: Add run-time MSR driver probe (David Arcari) [RHEL-128571]
+- tools/power turbostat: Set per_cpu_msr_sum to NULL after free (David Arcari) [RHEL-128571]
+- tools/power turbostat: Add LLC stats (David Arcari) [RHEL-128571]
+- tools/power turbostat: Remove dead code (David Arcari) [RHEL-128571]
+- tools/power turbostat: Refactor floating point printout code (David Arcari) [RHEL-128571]
+- tools/power turbostat.8: Update example (David Arcari) [RHEL-128571]
+- tools/power turbostat: Refactor added-counter value printing code (David Arcari) [RHEL-128571]
+- tools/power turbostat: Refactor added column header printing (David Arcari) [RHEL-128571]
+- tools/power turbostat: Regression fix Uncore MHz printed in hex (David Arcari) [RHEL-128571]
+
+* Mon Apr 13 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-693.el9]
+- x86/msr: Rename 'wrmsrl_on_cpu()' to 'wrmsrq_on_cpu()' [partial] (David Arcari) [RHEL-128565]
+- x86/msr: Rename 'rdmsrl_on_cpu()' to 'rdmsrq_on_cpu()' [partial] (David Arcari) [RHEL-128565]
+- x86/msr: Rename 'wrmsrl_safe_on_cpu()' to 'wrmsrq_safe_on_cpu()' [partial] (David Arcari) [RHEL-128565]
+- x86/msr: Rename 'rdmsrl_safe_on_cpu()' to 'rdmsrq_safe_on_cpu()' [partial] (David Arcari) [RHEL-128565]
+- x86/msr: Rename 'wrmsrl_safe()' to 'wrmsrq_safe()' [partial] (David Arcari) [RHEL-128565]
+- x86/msr: Rename 'rdmsrl_safe()' to 'rdmsrq_safe()' [partial] (David Arcari) [RHEL-128565]
+- x86/msr: Rename 'wrmsrl()' to 'wrmsrq()' [partial] (David Arcari) [RHEL-128565]
+- x86/msr: Rename 'rdmsrl()' to 'rdmsrq()' [partial] (David Arcari) [RHEL-128565]
+- platform/x86: intel-hid: disable wakeup_mode during hibernation (David Arcari) [RHEL-128565]
+- platform/x86: intel-hid: Enable 5-button array on ThinkPad X1 Fold 16 Gen 1 (David Arcari) [RHEL-128565]
+- platform/x86: intel-hid: Add Dell 16 Plus 2-in-1 to dmi_vgbs_allow_list (David Arcari) [RHEL-128565]
+- platform/x86: intel-hid: Add Dell 14 Plus 2-in-1 to dmi_vgbs_allow_list (David Arcari) [RHEL-128565]
+- platform/x86/intel/hid: Add Dell Pro Rugged 10/12 tablet to VGBS DMI quirks (David Arcari) [RHEL-128565]
+- platform/x86: int0002: Remove IRQF_ONESHOT from request_irq() (David Arcari) [RHEL-128565]
+- platform/x86/intel/tpmi/plr: Make the file domain<n>/status writeable (David Arcari) [RHEL-128565]
+- platform/x86: intel_telemetry: Fix PSS event register mask (David Arcari) [RHEL-128565]
+- platform/x86: intel_telemetry: Fix swapped arrays in PSS output (David Arcari) [RHEL-128565]
+- platform/x86/intel/vsec: Add Nova Lake PUNIT support (David Arcari) [RHEL-128565]
+- platform/x86/intel/pmc: Remove double empty line (David Arcari) [RHEL-128565]
+- platform/x86/intel/pmc: Enable substate residencies for multiple PMCs (David Arcari) [RHEL-128565]
+- platform/x86/intel/pmc: Move LPM mode attributes to PMC (David Arcari) [RHEL-128565]
+- platform/x86/intel/pmc: Change LPM mode fields to u8 (David Arcari) [RHEL-128565]
+- platform/x86/intel/uncore-freq: Replace sprintf() with sysfs_emit() (David Arcari) [RHEL-128565]
+- platform/x86/intel/uncore-freq: Replace sprintf() with scnprintf() (David Arcari) [RHEL-128565]
+- platform/x86/intel/pmt/discovery: use valid device pointer in dev_err_probe (David Arcari) [RHEL-128565]
+- platform/x86/intel/pmt: Fix kobject memory leak on init failure (David Arcari) [RHEL-128565]
+- platform/x86: intel/pmt: Replace sprintf() with sysfs_emit() (David Arcari) [RHEL-128565]
+- platform/x86: intel: punit_ipc: fix memory corruption (David Arcari) [RHEL-128565]
+- New configs in drivers/platform (David Arcari) [RHEL-128565]
+- platform/x86/intel: Introduce Intel Elkhart Lake PSE I/O (David Arcari) [RHEL-128565]
+- platform/x86/intel/speed_select_if: Convert PCIBIOS_* return codes to errnos (David Arcari) [RHEL-128565]
+- platform/x86/intel/hid: Add Nova Lake support (David Arcari) [RHEL-128565]
+- gfs2: Clean up SDF_JOURNAL_LIVE flag handling (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: No longer thaw filesystems during a withdraw (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: gfs2_freeze_unlock cleanup (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Refcounting fix in gfs2_thaw_super (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Minor gfs2_{freeze,thaw}_super cleanup (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Withdraw immediately in gfs2_trans_add_meta (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: New gfs2_withdraw_helper (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Clean up properly during a withdraw (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Rename gfs2_{gl_dq_holders => withdraw_glocks} (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: fix infinite loop when checking ail item count before go_inval" (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: Allow some glocks to be used during withdraw" (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: Check for log write errors before telling dlm to unlock" (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: fix a deadlock on withdraw-during-mount" (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: Force withdraw to replay journals and wait for it to finish" (6/6) (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: Force withdraw to replay journals and wait for it to finish" (5/6) (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: Force withdraw to replay journals and wait for it to finish" (4/6) (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: Force withdraw to replay journals and wait for it to finish" (3/6) (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: Force withdraw to replay journals and wait for it to finish" (2/6) (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: Force withdraw to replay journals and wait for it to finish" (1/6) (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Follow-up to flag rename in sysfs status file (Andreas Gruenbacher) [RHEL-65700]
+- Revert "gfs2: don't stop reads while withdraw in progress" (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Rename LM_FLAG_{NOEXP -> RECOVER} (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Kill gfs2_io_error_bh_wd (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Withdraw immediately on log write errors (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Rename gfs2_{withdrawing_or_ => }withdrawn (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Fix freeze consistency check in log_write_header (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Get rid of delayed withdraws (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Fix usage of bio->bi_status in gfs2_end_log_write (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Asynchronous withdraw (Andreas Gruenbacher) [RHEL-65700]
+- gfs2: Add clean argument to lm_unmount hook (Andreas Gruenbacher) [RHEL-65700]
+
+* Thu Apr 09 2026 CKI KWF Bot <cki-ci-bot+kwf-gitlab-com@redhat.com> [5.14.0-692.el9]
+- l2tp: avoid one data-race in l2tp_tunnel_del_work() (Guillaume Nault) [RHEL-152697]
+- l2tp: reset skb control buffer on xmit (Guillaume Nault) [RHEL-152697]
+- gpu: host1x: Add MLOCK recovery for rest of engines (Anusha Srivatsa) [RHEL-158926]
+- PCI/IOV: Allow drivers to control VF BAR size (Anusha Srivatsa) [RHEL-158926]
+- PCI/IOV: Check that VF BAR fits within the reservation (Anusha Srivatsa) [RHEL-158926]
+- PCI/IOV: Allow IOV resources to be resized in pci_resize_resource() (Anusha Srivatsa) [RHEL-158926]
+- PCI/IOV: Add pci_resource_num_to_vf_bar() to convert VF BAR number to/from IOV resource (Anusha Srivatsa) [RHEL-158926]
+- PCI/IOV: Restore VF resizable BAR state after reset (Anusha Srivatsa) [RHEL-158926]
+- PCI: Cache offset of Resizable BAR capability (Anusha Srivatsa) [RHEL-158926]
+- workqueue: Add system_percpu_wq and system_dfl_wq (Anusha Srivatsa) [RHEL-158926]
+- gpio: tegra186: Support multi-socket devices (Charles Mirabile) [RHEL-151652]
+- gpio: tegra186: Simplify GPIO line name prefix handling (Charles Mirabile) [RHEL-151652]
+- redhat/configs: Enable additional RV monitors on debug kernels (Gabriele Monaco) [RHEL-116707]
+- redhat/configs: Enable sched and rtapp RV monitors (Gabriele Monaco) [RHEL-116707]
+- rv: Replace non-existing rt_or_dl_task() in ltl monitors (Gabriele Monaco) [RHEL-116707]
+- rv: Fix wrong arguments to __assign_str() in tracepoints (Gabriele Monaco) [RHEL-116707]
+- perf test: Ensure lock contention using pipe mode (Michael Petlan) [RHEL-141682]
+- perf sched timehist: decode process names of processes in zombie state (Anubhav Shelat) [RHEL-33442]
+
+root=/dev/vda1 ro no_timer_check console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 spectre_v2=off nopti intel_iommu=on modprobe.blacklist=nouveau  hugepagesz=2M hugepages=64
+
+* Wed Apr 01 2026 Zoltan Fridrich <zfridric@redhat.com> - 9.9p1-8
+- Fix static analysis issues
+  Resolves: RHEL-163366
+- Ssh should refuse connection when mlkem kex is specified in FIPS
+  Resolves: RHEL-155161
+- CVE-2026-35385: Fix privilege escalation via scp legacy protocol
+  when not in preserving file mode
+  Resolves: RHEL-164754
+- CVE-2026-35388: Add connection multiplexing confirmation for proxy-mode
+  multiplexing sessions
+  Resolves: RHEL-166251
+- CVE-2026-35387: Fix incomplete application of PubkeyAcceptedAlgorithms
+  and HostbasedAcceptedAlgorithms with regard to ECDSA keys
+  Resolves: RHEL-166235
+- CVE-2026-35414: Fix mishandling of authorized_keys principals option
+  Resolves: RHEL-166203
+- CVE-2026-35386: Add validation rules to usernames and hostnames
+  set for ProxyJump/-J on the commandline
+  Resolves: RHEL-166219
+
+CENTOS9_VERSION=20260526.0

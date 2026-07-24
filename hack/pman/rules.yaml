@@ -16,6 +16,8 @@ none:
   - cluster-provision/images/*
   - cluster-provision/tools/*
   - cluster-up/cluster/external
+  - bisect/*
+  - debug/*
   - docs/*
   - LICENSE
   - Makefile
