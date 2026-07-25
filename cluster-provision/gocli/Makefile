@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 IMAGES_FILE ?= images.json
-KUBEVIRTCI_IMAGE_REPO ?= quay.io/kubevirtci
+KUBEVIRTCI_IMAGE_REPO ?= quay.io/dollierp
 GOCLI_IMAGE ?= $(KUBEVIRTCI_IMAGE_REPO)/gocli
 GOARCH ?= $$(uname -m | grep -q s390x && echo s390x || echo amd64)
 MULTIARCH_PLATFORMS ?= linux/amd64,linux/s390x

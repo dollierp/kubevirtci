@@ -46,7 +46,7 @@ func NewProvisionCommand() *cobra.Command {
 	provision.Flags().String("container-suffix", "", "use additional suffix for the provisioned container image")
 	provision.Flags().String("phases", "linux,k8s", "phases to run, possible values: linux,k8s linux k8s")
 	provision.Flags().StringArray("additional-persistent-kernel-arguments", []string{}, "additional persistent kernel arguments applied after provision")
-	provision.Flags().String("image-repo", "quay.io/kubevirtci", "the registry to publish the images to")
+	provision.Flags().String("image-repo", "quay.io/dollierp", "the registry to publish the images to")
 
 	return provision
 }
