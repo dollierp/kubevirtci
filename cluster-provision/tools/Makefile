@@ -16,7 +16,7 @@ fmt:
 
 .PHONY: container
 container: fmt
-	docker build -f check-image-pull-policies/Dockerfile -t kubevirtci/check-image-pull-policies .
+	podman build -f check-image-pull-policies/Dockerfile -t kubevirtci/check-image-pull-policies .
 
 .PHONY: vendor
 vendor:
