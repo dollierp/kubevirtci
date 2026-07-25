@@ -9,9 +9,9 @@ RUN dnf -y install \
     iptables \
     iputils \
     openssh-clients \
-    screen \
     socat \
     tcpdump \
+    tmux \
     qemu-kvm-core && \
     dnf clean all
 
