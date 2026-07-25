@@ -42,7 +42,7 @@ function gather_cluster_state() {
     ${ksh} describe nodes || true
 }
 
-export KUBEVIRTCI_GOCLI_CONTAINER=quay.io/kubevirtci/gocli:latest
+export KUBEVIRTCI_GOCLI_CONTAINER=quay.io/dollierp/gocli:latest
 # check cluster-up
 (
     ksh="./cluster-up/kubectl.sh"

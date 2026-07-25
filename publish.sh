@@ -23,10 +23,10 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # TARGET_REPO is the destination for this publication. SOURCE_REPO is the
 # canonical repository holding images from the previous release; unchanged
 # providers are copied from it into TARGET_REPO under the new tag.
-TARGET_REPO="${TARGET_REPO:-quay.io/kubevirtci}"
-SOURCE_REPO="quay.io/kubevirtci"
-TARGET_KUBEVIRT_REPO="quay.io/kubevirt"
-TARGET_GIT_REMOTE="https://kubevirt-bot@github.com/kubevirt/kubevirtci.git"
+TARGET_REPO="${TARGET_REPO:-quay.io/dollierp}"
+SOURCE_REPO="quay.io/dollierp"
+TARGET_KUBEVIRT_REPO="quay.io/dollierp"
+TARGET_GIT_REMOTE="git@github.com:dollierp/kubevirtci.git"
 
 source "${SCRIPT_DIR}/hack/detect_cri.sh"
 export CRI_BIN=${CRI_BIN:-$(detect_cri)}
