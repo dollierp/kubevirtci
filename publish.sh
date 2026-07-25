@@ -53,6 +53,9 @@ function run_provision_manager() {
       fi
   done < <(echo "$json_result" | jq -r 'to_entries[] | "\(.key):\(.value)"')
 
+  IMAGES_TO_BUILD=("$(find cluster-provision/k8s/* -maxdepth 0 -type d -printf '%f\n' | tail -1)")
+  IMAGES_TO_RETAG=("${IMAGES_TO_BUILD[@]}")
+
   echo "IMAGES_TO_BUILD: ${IMAGES_TO_BUILD[@]}"
   echo "IMAGES_TO_RETAG: ${IMAGES_TO_RETAG[@]}"
 }
@@ -82,8 +85,8 @@ function build_clusters() {
       cluster-provision/gocli/build/cli provision --phases k8s --image-repo ${TARGET_REPO} cluster-provision/k8s/$i
       ${CRI_BIN} tag ${TARGET_REPO}/k8s-$i ${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}
 
-      cluster-provision/gocli/build/cli provision --phases k8s --image-repo ${TARGET_REPO} cluster-provision/k8s/$i --slim
-      ${CRI_BIN} tag ${TARGET_REPO}/k8s-$i ${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}-slim
+      : cluster-provision/gocli/build/cli provision --phases k8s --image-repo ${TARGET_REPO} cluster-provision/k8s/$i --slim
+      : ${CRI_BIN} tag ${TARGET_REPO}/k8s-$i ${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}-slim
     elif [[ "$ARCH" == "s390x" ]]; then
       echo "INFO: building $i slim"
       cluster-provision/gocli/build/cli provision --phases k8s --image-repo ${TARGET_REPO} cluster-provision/k8s/$i --slim
