@@ -1,0 +1,138 @@
+KubeVirt CI
+===========
+
+Local workflow
+--------------
+
+Docker Compatibility (required by gocli)
+├─sudo mkdir -m 0700 -p /run/podman
+├─sudo podman system service --time='0' unix:///run/podman/podman.sock &
+├─disown "$(pgrep -f 'podman system service' --oldest)"
+└─sudo ln -sf /run/podman/podman.sock /var/run/docker.sock
+
+sudo ./cluster-provision/k8s/provision.sh
+├─./cluster-provision/gocli/Makefile => build gocli + gocli container image
+│ │ ├─CGO_ENABLED='0' go build -o build/ ./cmd/cli/
+│ │ └─podman image build build/ --tag='quay.io/dollierp/gocli:20260720.0'
+│ └─sudo podman image tag 'quay.io/dollierp/gocli:latest' 'quay.io/dollierp/gocli:20260720.0'
+│
+├─./cluster-provision/centos9/build.sh => build base CentOS VM image in a container
+│ │ └─podman image build . \
+│ │     --build-arg=BUILDARCH='x86_64' \
+│ │     --build-arg=CENTOS_VERSION='20260720.0' \
+│ │     --tag='quay.io/dollierp/centos9:latest'
+│ └─sudo podman image tag 'quay.io/dollierp/centos9:latest' 'quay.io/dollierp/centos9:20260720.0'
+│
+├─sudo ../../gocli/build/cli provision ./cluster-provision/k8s/1.36 --phases linux,k8s
+│ ├─starts a VM and customize the OS (phase linux)
+│ │ └─docker container run 'quay.io/dollierp/centos9:latest' /vm.sh ...
+│ │   └─qemu
+│ │     └─ssh sudo /bin/bash <./cluster-provision/k8s/1.36/provision.sh
+│ ├─starts a VM and deploy k8s (phase k8s)
+│ │ └─docker container run 'quay.io/dollierp/centos9:latest' /vm.sh ...
+│ │   └─qemu
+│ │     └─ssh sudo /bin/bash <./cluster-provision/k8s/1.36/k8s_provision.sh
+│ │       └─kubeadm
+│ │         └─kubelet
+│ │           ├─kube-apiserver
+│ │           ├─kube-controller-manager
+│ │           └─kube-scheduler
+│ └─sudo podman image tag 'quay.io/dollierp/k8s-1.36:latest' 'quay.io/dollierp/k8s-1.36:20260413.0'
+│
+├─make cluster-up KUBEVIRTCI_TAG='20260413.0'
+├─./cluster-up/check.sh => check for nested virtualization configuration
+└─./cluster-up/up.sh
+  ├─./cluster-up/hack/common.sh
+  └─./cluster-up/cluster/k8s-1.36/provider.sh
+    ├─./cluster-up/cluster/k8s-provider-common.sh
+    │  └─./cluster-up/cluster/ephemeral-provider-common.sh => podman
+    └─up
+      └─podman quay.io/kubevirtci/gocli:${KUBEVIRTCI_TAG} run
+        └─./cluster-provision/gocli run
+          └─docker container run --privileged --name=k8s-1.36-node01 quay.io/kubevirtci/k8s-1.36:${KUBEVIRTCI_TAG} /vm.sh
+            └─./cluster-provision/centos9/scripts/vm.sh => starts one container per node with /vm.sh as entrypoint
+              └─qemu disk.qcow2
+
+Debug workflow
+--------------
+
+sudo podman exec -it k8s-1.36-node01 /bin/bash
+└─screen /dev/pts/0
+
+sudo KUBEVIRTCI_TAG=latest ./cluster-up/ssh.sh node01
+
+Prow workflow
+-------------
+
+### periodic-kubevirtci-bump-centos-base ###
+
+PHASES=linux BYPASS_PMAN_CHANGE_CHECK=true ./publish.sh
+├─./cluster-provision/centos9/build.sh
+│ │ └─podman image build . \
+│ │     --build-arg=BUILDARCH='x86_64' \
+│ │     --build-arg=CENTOS_VERSION='20260720.0' \
+│ │     --tag='quay.io/dollierp/centos9:latest'
+│ └─podman image tag 'quay.io/dollierp/centos9:latest' 'quay.io/dollierp/centos9:20260720.0'
+│
+├─./cluster-provision/k8s/1.36/../provision.sh
+│ ├─make -C ../gocli cli
+│ │ └─sudo podman image tag 'quay.io/dollierp/gocli:latest' 'quay.io/dollierp/gocli:20260720.0'
+│ │
+│ └─sudo ../../gocli/build/cli provision ./cluster-provision/k8s/1.36 --phases linux
+│   ├─sudo podman image pull 'quay.io/kubevirtci/centos9:2604210400-b17217c6'
+│   ├─sudo podman image tag 'quay.io/kubevirtci/centos9:2604210400-b17217c6' 'quay.io/dollierp/centos9:latest' # override the base CentOS image
+│   └─starts a VM and customize the OS (phase linux)
+│     └─docker container run 'quay.io/dollierp/centos9:latest' /vm.sh ...
+│       └─qemu
+│         └─ssh sudo /bin/bash <./cluster-provision/k8s/1.36/provision.sh
+├─sudo podman image tag 'quay.io/dollierp/centos-base:latest' 'quay.io/dollierp/centos9-base:20260720.0' 'quay.io/dollierp/centos9:20260720.0'
+├─sudo podman image push 'quay.io/dollierp/centos9:20260720.0'
+└─echo 'quay.io/dollierp/centos9:20260720.0' >cluster-provision/k8s/base-image
+
+### check-provision-k8s-1.36 ###
+
+PHASES=k8s ./cluster-provision/k8s/1.36/../provision.sh
+
+### publish-kubevirtci ###
+
+PHASES=k8s ./publish.sh
+
+Knowledge Base
+--------------
+
+cluster-provision/gocli/cmd/run.go#run()
+├─cluster-provision/gocli/cmd/run.go#cli.ContainerCreate()
+│ └─docker container create
+├─cluster-provision/gocli/cmd/run.go#cli.ContainerStart()
+│ └─docker container start
+│   └─cluster-provision/centos9/scripts/vm.sh
+│     └─qemu
+├─cluster-provision/gocli/cmd/run.go#waitForVMToBeUp()
+└─cluster-provision/gocli/cmd/run.go#provisionNode()
+
+### https://wiki.archlinux.org/title/QEMU#Audio ###
+
+cluster-provision/gocli/cmd/run.go#provisionNode()
+└─soundcardPCIIDs
+  └─cluster-provision/gocli/opts/bind-vfio/bind-vfio.go#NewBindVfioOpt()
+    └─cluster-provision/gocli/opts/bind-vfio/bind-vfio.go#Exec()
+
+Binding a device to the `vfio-pci` driver is required for PCI-passthrough:
+- https://docs.kernel.org/driver-api/vfio.html
+- https://kernel-internals.org/virtualization/vfio/
+- https://wiki.archlinux.org/title/PCI_passthrough_via_OVMF
+- https://doc.ubuntu-fr.org/vfio
+- https://community.ibm.com/community/user/blogs/tasmiya-nalatwad/2025/11/11/vfio-passthrough-in-kvm-guests
+
+```
+time="2026-07-25T11:46:25Z" level=info msg="[node 1]: lspci -D -d 8086:2668"
+time="2026-07-25T11:46:25Z" level=info msg="[node 1]: readlink /sys/bus/pci/devices/0000:00:06.0/driver | awk -F'/' '{print $NF}'"
+time="2026-07-25T11:46:25Z" level=info msg="[node 1]: modprobe -i vfio-pci"
+time="2026-07-25T11:46:25Z" level=info msg="[node 1]: if [[ ! -d /sys/bus/pci/devices/0000:00:06.0 ]]; then echo 'PCI address does not exist!' && exit 1; fi"
+time="2026-07-25T11:46:25Z" level=info msg="[node 1]: if [[ ! -d /sys/bus/pci/devices/0000:00:06.0/iommu/ ]]; then echo 'No vIOMMU found in the VM' && exit 1; fi"
+time="2026-07-25T11:46:26Z" level=info msg="[node 1]: [[ 'snd_hda_intel' != 'vfio-pci' ]] && echo 0000:00:06.0 > /sys/bus/pci/devices/0000:00:06.0/driver/unbind && echo 'vfio-pci' > /sys/bus/pci/devices/0000:00:06.0/driver_override && echo 0000:00:06.0 > /sys/bus/pci/drivers/vfio-pci/bind"
+time="2026-07-25T11:46:26Z" level=info msg="[node 1]: lspci -D -d 8086:2415"
+time="2026-07-25T11:46:26Z" level=info msg="[node 1]: readlink /sys/bus/pci/devices//driver | awk -F'/' '{print $NF}'"
+time="2026-07-25T11:46:26Z" level=info msg="[node 1]: modprobe -i vfio-pci"
+time="2026-07-25T11:46:26Z" level=info msg="[node 1]: if [[ ! -d /sys/bus/pci/devices/ ]]; then echo 'PCI address does not exist!' && exit 1; fi"
+time="2026-07-25T11:46:26Z" level=info msg="[node 1]: if [[ ! -d /sys/bus/pci/devices//iommu/ ]]; then echo 'No vIOMMU found in the VM' && exit 1;```
