@@ -20,9 +20,9 @@ PHASES=${PHASES:-k8s}
 
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-TARGET_REPO="quay.io/kubevirtci"
-TARGET_KUBEVIRT_REPO="quay.io/kubevirt"
-TARGET_GIT_REMOTE="https://kubevirt-bot@github.com/kubevirt/kubevirtci.git"
+TARGET_REPO="quay.io/dollierp"
+TARGET_KUBEVIRT_REPO="quay.io/dollierp"
+TARGET_GIT_REMOTE="git@github.com:dollierp/kubevirtci.git"
 
 source "${SCRIPT_DIR}/hack/detect_cri.sh"
 export CRI_BIN=${CRI_BIN:-$(detect_cri)}
@@ -38,7 +38,7 @@ function run_provision_manager() {
       return
   fi
 
-  json_result=$(${CRI_BIN} run --rm -v $(pwd):/workdir:Z quay.io/kubevirtci/gocli provision-manager)
+  json_result=$(${CRI_BIN} run --rm -v $(pwd):/workdir:Z quay.io/dollierp/gocli provision-manager)
   echo "INFO: Provision manager results: $json_result"
 
   while IFS=":" read key value; do
