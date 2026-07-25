@@ -44,6 +44,9 @@ else
     fi
 fi
 
+docker()( unset -f docker; set -x; docker "$@" )
+podman()( unset -f podman; set -x; podman "$@" )
+
 _cli_container="${KUBEVIRTCI_GOCLI_CONTAINER:-quay.io/dollierp/gocli:${KUBEVIRTCI_TAG}}"
 _cli="${_cri_bin} run --privileged --net=host --rm ${USE_TTY} -v ${_cri_socket}:/var/run/docker.sock -e KUBEVIRT_PROVIDER=${KUBEVIRT_PROVIDER} -e DOCKER_API_VERSION"
 # gocli will try to mount /lib/modules to make it accessible to dnsmasq in

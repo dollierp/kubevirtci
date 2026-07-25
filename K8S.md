@@ -71,7 +71,7 @@ make cluster-up
 ## Attach to node console with screen and pty
 ```                                                  
 # Attach to node01 console                           
-docker exec -it ${KUBEVIRT_PROVIDER}-node01 screen /dev/pts/0
+podman exec -it ${KUBEVIRT_PROVIDER}-node01 screen /dev/pts/0
 ```                                                 
 Use `cloud-user:cloud-user` or `root:root` to login.
 Note: it is sometimes `/dev/pts/1` or `/dev/pts/2`, try them in case you don't get a prompt.
