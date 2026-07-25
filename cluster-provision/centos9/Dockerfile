@@ -12,9 +12,9 @@ RUN dnf -y install \
     iputils \
     openssh-clients \
     qemu-kvm-core \
-    screen \
     socat \
     tcpdump \
+    tmux \
     $([ "$BUILDARCH" = "s390x" ] && echo "s390utils-core") && \
     dnf clean all
 
