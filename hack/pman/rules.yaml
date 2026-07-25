@@ -16,6 +16,7 @@ none:
   - cluster-provision/images/*
   - cluster-provision/tools/*
   - cluster-up/cluster/external
+  - docs/*
   - LICENSE
   - Makefile
   - OWNERS
