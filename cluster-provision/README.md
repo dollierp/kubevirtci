@@ -7,7 +7,7 @@ can be used from a docker image, so no need to install it. You can for instance
 use a bash alias:
 
 ```bash
-alias gocli="docker run --net=host --privileged --rm -it -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli:latest"
+alias gocli="podman run --net=host --privileged --rm -it -v /var/run/docker.sock:/var/run/docker.sock kubevirtci/gocli:latest"
 gocli help
 ```
 
