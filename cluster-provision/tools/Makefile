@@ -35,4 +35,4 @@ coverage:
 
 .PHONY: push
 push: container
-	docker push kubevirtci/check-image-pull-policies
+	: docker push kubevirtci/check-image-pull-policies

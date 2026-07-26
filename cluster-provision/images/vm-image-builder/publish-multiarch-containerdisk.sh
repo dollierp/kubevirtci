@@ -89,7 +89,7 @@ publish_image() {
     local full_image_name="${1:?}"
     for arch in ${archs[*]};do
         podman tag ${build_target}:${arch} ${full_image_name}-${arch}
-        skopeo copy "containers-storage:${full_image_name}-${arch}" "docker://${full_image_name}-${arch}"
+        : skopeo copy "containers-storage:${full_image_name}-${arch}" "docker://${full_image_name}-${arch}"
     done
 }
 
@@ -101,7 +101,7 @@ publish_manifest() {
         amend+=" --amend ${full_image_name}-${arch}"
     done
     podman manifest create ${full_image_name} ${amend}
-    podman manifest push ${full_image_name} "docker://${full_image_name}"
+    : podman manifest push ${full_image_name} "docker://${full_image_name}"
 }
 
 main "$@"
