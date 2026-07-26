@@ -2,6 +2,10 @@
 
 set -e
 
+git()( unset -f; set -x; git "$@" )
+podman()( unset -f; set -x; podman "$@" )
+skopeo()( unset -f; set -x; skopeo "$@" )
+
 archs=(amd64 s390x)
 ARCH=$(uname -m | grep -q s390x && echo s390x || echo amd64)
 
@@ -92,7 +96,7 @@ function push_node_base_image() {
   fi
   ${CRI_BIN} tag ${TARGET_REPO}/centos${CENTOS_VERSION}-base:latest ${TARGET_IMAGE}
   echo "INFO: push $TARGET_IMAGE"
-  ${CRI_BIN} push ${TARGET_IMAGE}
+  : ${CRI_BIN} push ${TARGET_IMAGE}
 }
 
 function push_cluster_images() {
@@ -100,14 +104,14 @@ function push_cluster_images() {
     if [ $ARCH == "amd64" ]; then
       echo "INFO: push $i"
       TARGET_IMAGE="${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}"
-      ${CRI_BIN} push "$TARGET_IMAGE"
+      : ${CRI_BIN} push "$TARGET_IMAGE"
 
       TARGET_IMAGE="${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}-slim"
-      ${CRI_BIN} push "$TARGET_IMAGE"
+      : ${CRI_BIN} push "$TARGET_IMAGE"
     elif [[ "$ARCH" == "s390x" && "$i" == "1.34" ]]; then
       echo "INFO: push $i slim"
       TARGET_IMAGE="${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}-slim-${ARCH}"
-      ${CRI_BIN} push "$TARGET_IMAGE"
+      : ${CRI_BIN} push "$TARGET_IMAGE"
     fi
   done
 
@@ -115,12 +119,12 @@ function push_cluster_images() {
   for i in ${IMAGES_TO_RETAG[@]}; do
     if [ $ARCH == "amd64" ]; then
       echo "INFO: retagging $i (previous tag $PREV_KUBEVIRTCI_TAG)"
-      skopeo copy "docker://${TARGET_REPO}/k8s-$i:${PREV_KUBEVIRTCI_TAG}" "docker://${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}"
+      : skopeo copy "docker://${TARGET_REPO}/k8s-$i:${PREV_KUBEVIRTCI_TAG}" "docker://${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}"
       echo "INFO: retagging $i (previous tag $PREV_KUBEVIRTCI_TAG-slim)"
-      skopeo copy "docker://${TARGET_REPO}/k8s-$i:${PREV_KUBEVIRTCI_TAG}-slim" "docker://${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}-slim"
+      : skopeo copy "docker://${TARGET_REPO}/k8s-$i:${PREV_KUBEVIRTCI_TAG}-slim" "docker://${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}-slim"
     elif [[ "$ARCH" == "s390x" && "$i" == "1.34" ]]; then
       echo "INFO: retagging $i (previous tag $PREV_KUBEVIRTCI_TAG-slim-$ARCH)"
-      skopeo copy "docker://${TARGET_REPO}/k8s-$i:${PREV_KUBEVIRTCI_TAG}-slim-${ARCH}" "docker://${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}-slim-${ARCH}"
+      : skopeo copy "docker://${TARGET_REPO}/k8s-$i:${PREV_KUBEVIRTCI_TAG}-slim-${ARCH}" "docker://${TARGET_REPO}/k8s-$i:${KUBEVIRTCI_TAG}-slim-${ARCH}"
     fi
   done
 }
@@ -134,7 +138,7 @@ function push_gocli() {
   else
     echo "INFO: skipping gocli push on ${ARCH}, handled by amd64 job"
   fi
-  ${CRI_BIN} push "$TARGET_IMAGE"
+  : ${CRI_BIN} push "$TARGET_IMAGE"
 }
 
 function publish_node_base_image() {
@@ -156,7 +160,7 @@ function create_git_tag() {
 
   echo "INFO: push new tag $KUBEVIRTCI_TAG"
   git tag ${KUBEVIRTCI_TAG}
-  git push ${TARGET_GIT_REMOTE} ${KUBEVIRTCI_TAG}
+  : git push ${TARGET_GIT_REMOTE} ${KUBEVIRTCI_TAG}
 }
 
 publish_manifest() {
@@ -177,7 +181,7 @@ publish_manifest() {
     fi
   done
   ${CRI_BIN} manifest create ${full_image_name} ${amend}
-  ${CRI_BIN} manifest push ${full_image_name} "docker://${full_image_name}"
+  : ${CRI_BIN} manifest push ${full_image_name} "docker://${full_image_name}"
 
 }
 
