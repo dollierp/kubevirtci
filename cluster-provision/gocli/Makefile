@@ -57,4 +57,4 @@ push:
 	$(CRI_BIN) image build ./build/ \
 		--platform $(MULTIARCH_PLATFORMS) \
 		--manifest $(GOCLI_IMAGE):$(KUBEVIRTCI_TAG)
-	$(CRI_BIN) manifest push $(GOCLI_IMAGE):$(KUBEVIRTCI_TAG) docker://$(GOCLI_IMAGE):$(KUBEVIRTCI_TAG)
+	: $(CRI_BIN) manifest push $(GOCLI_IMAGE):$(KUBEVIRTCI_TAG) docker://$(GOCLI_IMAGE):$(KUBEVIRTCI_TAG)
