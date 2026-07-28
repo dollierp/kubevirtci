@@ -1,4 +1,6 @@
-FROM registry.fedoraproject.org/fedora:43 AS base
+FROM quay.io/centos/centos:stream9 AS base
+
+RUN dnf -y install epel-release
 
 RUN dnf -y install \
     bind-utils \
@@ -9,10 +11,10 @@ RUN dnf -y install \
     iptables \
     iputils \
     openssh-clients \
+    qemu-kvm-core \
     screen \
     socat \
-    tcpdump \
-    qemu-kvm-core && \
+    tcpdump && \
     dnf clean all
 
 FROM base AS imageartifactdownload
@@ -25,8 +27,7 @@ WORKDIR /
 RUN echo "CentOS Stream 9 version $CENTOS_VERSION" && \
     curl --fail-with-body --retry 2 -LR -o box.qcow2 https://cloud.centos.org/centos/9-stream/$BUILDARCH/images/CentOS-Stream-GenericCloud-9-$CENTOS_VERSION.$BUILDARCH.qcow2 && \
     # Access virtual machine disk images directly by using LIBGUESTFS_BACKEND=direct, instead of libvirt
-    export LIBGUESTFS_BACKEND=direct && \
-    guestfish --ro --add box.qcow2 --mount /dev/sda1:/ ls /boot/ | grep -E '^vmlinuz-|^initramfs-' | xargs -I {} guestfish --ro --add box.qcow2 -i copy-out /boot/{} / ;
+    LIBGUESTFS_BACKEND='direct' virt-get-kernel --add='box.qcow2' --output='/'
 
 FROM base AS nodecontainer
 
