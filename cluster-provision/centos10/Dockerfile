@@ -2,6 +2,10 @@ FROM quay.io/centos/centos:stream9 AS base
 
 ARG BUILDARCH=x86_64
 
+RUN curl --fail-with-body --retry 2 -sSLRO https://people.redhat.com/dollierp/qemu-sriov-rpms/qemu-sriov-rpms.repo --output-dir /etc/yum.repos.d && \
+    sed -e 's|@dist@|el9|g' -i /etc/yum.repos.d/qemu-sriov-rpms.repo && \
+    : dnf -y install qemu-kvm-core-17:10.1.0-25.el9.x86_64
+
 RUN dnf -y install epel-release
 
 RUN dnf -y install \
