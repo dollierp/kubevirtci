@@ -233,6 +233,7 @@ if [ "${host_arch}" == "s390x" ]; then
     -vnc :${n} \
     -cpu host \
     -m ${MEMORY} \
+    -rtc base=utc,clock=host \
     -smp ${CPU} \
     -serial pty \
     -machine s390-ccw-virtio,accel=kvm \
@@ -259,6 +260,7 @@ else
     -vnc :${n} \
     -cpu host,migratable=no,+invtsc \
     -m ${MEMORY} \
+    -rtc base=utc,clock=host \
     -smp ${CPU} ${numa_arg} \
     -serial pty \
     -machine q35,accel=kvm,kernel_irqchip=split \
