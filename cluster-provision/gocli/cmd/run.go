@@ -1179,6 +1179,7 @@ func waitForVMToBeUp(cli *client.Client, prefix string, nodeName string) error {
 
 func logContainerDiagnostics(cli *client.Client, prefix string, nodeName string, phase string) {
 	diagCmd := `echo "=== resource snapshot (%s, %s) ===" && date -Iseconds && ` +
+		`echo "--- clock ---" && TZ=UTC date && ` +
 		`echo "--- loadavg ---" && cat /proc/loadavg && ` +
 		`echo "--- memory ---" && free -m && ` +
 		`echo "--- psi cpu ---" && (cat /proc/pressure/cpu 2>/dev/null || echo "PSI unavailable") && ` +
