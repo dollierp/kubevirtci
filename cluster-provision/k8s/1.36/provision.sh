@@ -2,6 +2,15 @@
 
 set -ex
 
+(
+  { set +e; } 2>/dev/null
+  export TZ='UTC'
+  date
+  hwclock --get
+  timedatectl status
+  exit 0
+)
+
 ARCH=$(uname -m)
 
 KUBEVIRTCI_SHARED_DIR=/var/lib/kubevirtci
