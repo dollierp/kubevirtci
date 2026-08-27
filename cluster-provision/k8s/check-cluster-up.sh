@@ -138,10 +138,6 @@ export KUBEVIRTCI_GOCLI_CONTAINER=quay.io/kubevirtci/gocli:latest
         fi
 
         skip_tests=(
-            # Pod InPlace Resize Container tests fail with "resize is infeasible" timeout on kubevirtci nodes.
-            # FIXME: Skip them until the root cause is resolved. See https://github.com/kubevirt/kubevirtci/issues/1631
-            'Pod.InPlace.Resize.Container'
-
             # Unlike containerd, CRI-O does not set `net.ipv4.ip_unprivileged_port_start` by default;
             # therefore, the test fails to `listen tcp 0.0.0.0:443: bind: permission denied`.
             # FIXME: Skip the test until CRI-O configures it. See https://github.com/cri-o/cri-o/issues/10050
